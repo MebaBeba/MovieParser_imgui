@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/main.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/main.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/main.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/MovieDB.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/MovieDB.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/MovieDB.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/MovieDB.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/ImGui/imgui.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/ImGui/imgui.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/ImGui/imgui_demo.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_demo.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_demo.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/ImGui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/ImGui/imgui_draw.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_draw.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_draw.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/ImGui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/ImGui/imgui_tables.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_tables.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_tables.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/ImGui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/ImGui/imgui_widgets.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_widgets.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_widgets.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/ImGui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -x objective-c++ -o CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_glfw.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui -I/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends -I/opt/homebrew/Cellar/nlohmann-json/3.12.0/include -F/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_opengl3.cpp",
+  "file": "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o"
+}
+]

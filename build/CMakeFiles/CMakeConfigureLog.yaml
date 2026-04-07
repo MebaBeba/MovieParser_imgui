@@ -1,0 +1,2782 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/usr/local/opt/qt/bin/uname"
+      - "/Users/daniarnugaev/.rbenv/shims/uname"
+      - "/usr/local/opt/ruby/bin/uname"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/uname"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Darwin - 25.3.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/gmake"
+      - "/opt/homebrew/sbin/gmake"
+      - "/usr/local/opt/qt/bin/gmake"
+      - "/Users/daniarnugaev/.rbenv/shims/gmake"
+      - "/usr/local/opt/ruby/bin/gmake"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/gmake"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/System/Cryptexes/App/usr/bin/gmake"
+      - "/usr/bin/gmake"
+      - "/bin/gmake"
+      - "/usr/sbin/gmake"
+      - "/sbin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/gmake"
+      - "/opt/pmk/env/global/bin/gmake"
+      - "/Library/Apple/usr/bin/gmake"
+      - "/Users/daniarnugaev/.rvm/bin/gmake"
+      - "/opt/homebrew/bin/make"
+      - "/opt/homebrew/sbin/make"
+      - "/usr/local/opt/qt/bin/make"
+      - "/Users/daniarnugaev/.rbenv/shims/make"
+      - "/usr/local/opt/ruby/bin/make"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/make"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/make"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/make"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/make"
+      - "/usr/local/bin/make"
+      - "/System/Cryptexes/App/usr/bin/make"
+    found: "/usr/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/cc"
+      - "/opt/homebrew/sbin/cc"
+      - "/usr/local/opt/qt/bin/cc"
+      - "/Users/daniarnugaev/.rbenv/shims/cc"
+      - "/usr/local/opt/ruby/bin/cc"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/cc"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/cc"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/cc"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/cc"
+      - "/usr/local/bin/cc"
+      - "/System/Cryptexes/App/usr/bin/cc"
+    found: "/usr/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is AppleClang, found in:
+        /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/4.2.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting C compiler apple sysroot: "/usr/bin/cc" "-E" "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 418 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 86 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 87 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 206 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 168 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 153 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 154 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 169 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 207 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.c" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/usr/bin/objcopy"
+      - "/opt/homebrew/bin/objcopy"
+      - "/opt/homebrew/sbin/objcopy"
+      - "/usr/local/opt/qt/bin/objcopy"
+      - "/Users/daniarnugaev/.rbenv/shims/objcopy"
+      - "/usr/local/opt/ruby/bin/objcopy"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/objcopy"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/objcopy"
+      - "/usr/local/bin/objcopy"
+      - "/System/Cryptexes/App/usr/bin/objcopy"
+      - "/bin/objcopy"
+      - "/usr/sbin/objcopy"
+      - "/sbin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/objcopy"
+      - "/opt/pmk/env/global/bin/objcopy"
+      - "/Library/Apple/usr/bin/objcopy"
+      - "/Users/daniarnugaev/.rvm/bin/objcopy"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/usr/bin/readelf"
+      - "/opt/homebrew/bin/readelf"
+      - "/opt/homebrew/sbin/readelf"
+      - "/usr/local/opt/qt/bin/readelf"
+      - "/Users/daniarnugaev/.rbenv/shims/readelf"
+      - "/usr/local/opt/ruby/bin/readelf"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/readelf"
+      - "/usr/local/bin/readelf"
+      - "/System/Cryptexes/App/usr/bin/readelf"
+      - "/bin/readelf"
+      - "/usr/sbin/readelf"
+      - "/sbin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/readelf"
+      - "/opt/pmk/env/global/bin/readelf"
+      - "/Library/Apple/usr/bin/readelf"
+      - "/Users/daniarnugaev/.rvm/bin/readelf"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/opt/homebrew/bin/dlltool"
+      - "/opt/homebrew/sbin/dlltool"
+      - "/usr/local/opt/qt/bin/dlltool"
+      - "/Users/daniarnugaev/.rbenv/shims/dlltool"
+      - "/usr/local/opt/ruby/bin/dlltool"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/System/Cryptexes/App/usr/bin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
+      - "/opt/pmk/env/global/bin/dlltool"
+      - "/Library/Apple/usr/bin/dlltool"
+      - "/Users/daniarnugaev/.rvm/bin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/usr/bin/addr2line"
+      - "/opt/homebrew/bin/addr2line"
+      - "/opt/homebrew/sbin/addr2line"
+      - "/usr/local/opt/qt/bin/addr2line"
+      - "/Users/daniarnugaev/.rbenv/shims/addr2line"
+      - "/usr/local/opt/ruby/bin/addr2line"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/addr2line"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/addr2line"
+      - "/usr/local/bin/addr2line"
+      - "/System/Cryptexes/App/usr/bin/addr2line"
+      - "/bin/addr2line"
+      - "/usr/sbin/addr2line"
+      - "/sbin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/addr2line"
+      - "/opt/pmk/env/global/bin/addr2line"
+      - "/Library/Apple/usr/bin/addr2line"
+      - "/Users/daniarnugaev/.rvm/bin/addr2line"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/opt/homebrew/bin/tapi"
+      - "/opt/homebrew/sbin/tapi"
+      - "/usr/local/opt/qt/bin/tapi"
+      - "/Users/daniarnugaev/.rbenv/shims/tapi"
+      - "/usr/local/opt/ruby/bin/tapi"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/System/Cryptexes/App/usr/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
+      - "/opt/pmk/env/global/bin/tapi"
+      - "/Library/Apple/usr/bin/tapi"
+      - "/Users/daniarnugaev/.rvm/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "g++"
+      - "cl"
+      - "bcc"
+      - "icpx"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "/usr/bin/"
+    found: "/usr/bin/c++"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is AppleClang, found in:
+        /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/4.2.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/usr/bin/c++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 433 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 86 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 87 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 206 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 168 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 153 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 154 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 169 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 207 "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake:76 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_INSTALL_NAME_TOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "install_name_tool"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/usr/local/opt/qt/bin/install_name_tool"
+      - "/Users/daniarnugaev/.rbenv/shims/install_name_tool"
+      - "/usr/local/opt/ruby/bin/install_name_tool"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/install_name_tool"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8"
+      binary: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ac7e1/fast
+        /Applications/Xcode_15.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ac7e1.dir/build.make CMakeFiles/cmTC_ac7e1.dir/build
+        Building C object CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Apple clang version 15.0.0 (clang-1500.0.40.1)
+        Target: arm64-apple-darwin25.3.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8 -resource-dir /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin25.3.0
+        ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/include
+         /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include
+         /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking C executable cmTC_ac7e1
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac7e1.dir/link.txt --verbose=1
+        Apple clang version 15.0.0 (clang-1500.0.40.1)
+        Target: arm64-apple-darwin25.3.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_ac7e1 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:dyld-1015.7
+        BUILD 18:48:48 Aug 22 2023
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.3)
+        Library search paths:
+        	/usr/local/lib
+        Framework search paths:
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -o cmTC_ac7e1
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/include]
+          add: [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+          add: [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include] ==> [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        collapse include dir [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ac7e1/fast]
+        ignore line: [/Applications/Xcode_15.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ac7e1.dir/build.make CMakeFiles/cmTC_ac7e1.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
+        ignore line: [Target: arm64-apple-darwin25.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8 -resource-dir /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-Hn2nd8 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin25.3.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_ac7e1]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac7e1.dir/link.txt --verbose=1]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
+        ignore line: [Target: arm64-apple-darwin25.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_ac7e1 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [14.0.0] ==> ignore
+          arg [14.0] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_ac7e1] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_ac7e1.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'C': /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/usr/local/lib]
+        remove lib [System]
+        remove lib [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/usr/local/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld  PROJECT:dyld-1015.7
+      BUILD 18:48:48 Aug 22 2023
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.3)
+      Library search paths:
+      Framework search paths:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi"
+      binary: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_40af6/fast
+        /Applications/Xcode_15.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_40af6.dir/build.make CMakeFiles/cmTC_40af6.dir/build
+        Building CXX object CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Apple clang version 15.0.0 (clang-1500.0.40.1)
+        Target: arm64-apple-darwin25.3.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi -resource-dir /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin25.3.0
+        ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/include
+         /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1
+         /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include
+         /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking CXX executable cmTC_40af6
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40af6.dir/link.txt --verbose=1
+        Apple clang version 15.0.0 (clang-1500.0.40.1)
+        Target: arm64-apple-darwin25.3.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_40af6 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:dyld-1015.7
+        BUILD 18:48:48 Aug 22 2023
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.3)
+        Library search paths:
+        	/usr/local/lib
+        Framework search paths:
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_40af6
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/include]
+          add: [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+          add: [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+          add: [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1] ==> [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        collapse include dir [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include] ==> [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        collapse include dir [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1;/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include;/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_40af6/fast]
+        ignore line: [/Applications/Xcode_15.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_40af6.dir/build.make CMakeFiles/cmTC_40af6.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
+        ignore line: [Target: arm64-apple-darwin25.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=14.0 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1015.6 -v -fcoverage-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi -resource-dir /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0 -dependency-file CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-QWlGgi -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 15.0.0 (clang-1500.0.40.1) default target arm64-apple-darwin25.3.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_40af6]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40af6.dir/link.txt --verbose=1]
+        ignore line: [Apple clang version 15.0.0 (clang-1500.0.40.1)]
+        ignore line: [Target: arm64-apple-darwin25.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.0 -syslibroot /Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -o cmTC_40af6 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [14.0.0] ==> ignore
+          arg [14.0] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_40af6] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_40af6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/usr/local/lib]
+        remove lib [System]
+        remove lib [/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/usr/local/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "/Applications/Xcode_15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld  PROJECT:dyld-1015.7
+      BUILD 18:48:48 Aug 22 2023
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.0.12.3)
+      Library search paths:
+      Framework search paths:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenGL.cmake:356 (find_library)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "library"
+    variable: "OPENGL_gl_LIBRARY"
+    description: "OpenGL GL library"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "OpenGL"
+      - "GL"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    found: "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenGL.cmake:358 (find_library)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "library"
+    variable: "OPENGL_glu_LIBRARY"
+    description: "OpenGL GLU library"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "OpenGL"
+      - "GLU"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    found: "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenGL.cmake:360 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "OPENGL_INCLUDE_DIR"
+    description: "Include for OpenGL"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "OpenGL/gl.h"
+      - "GL/gl.h"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/include/"
+      - "/opt/homebrew/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/sw/include/"
+      - "/sw/"
+      - "/opt/local/include/"
+      - "/opt/local/"
+      - "/usr/include/X11/"
+      - "/Users/daniarnugaev/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/Network/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    searched_directories:
+      - "/opt/homebrew/bin/OpenGL.framework/Headers/gl.h"
+      - "/opt/homebrew/sbin/OpenGL.framework/Headers/gl.h"
+      - "/usr/local/opt/qt/bin/OpenGL.framework/Headers/gl.h"
+      - "/Users/daniarnugaev/.rbenv/shims/OpenGL.framework/Headers/gl.h"
+      - "/usr/local/opt/ruby/bin/OpenGL.framework/Headers/gl.h"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenGL.framework/Headers/gl.h"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/OpenGL.framework/Headers/gl.h"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/OpenGL.framework/Headers/gl.h"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/OpenGL.framework/Headers/gl.h"
+      - "/usr/local/bin/OpenGL.framework/Headers/gl.h"
+      - "/System/Cryptexes/App/usr/bin/OpenGL.framework/Headers/gl.h"
+      - "/usr/bin/OpenGL.framework/Headers/gl.h"
+      - "/bin/OpenGL.framework/Headers/gl.h"
+      - "/usr/sbin/OpenGL.framework/Headers/gl.h"
+      - "/sbin/OpenGL.framework/Headers/gl.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/OpenGL.framework/Headers/gl.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/OpenGL.framework/Headers/gl.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/OpenGL.framework/Headers/gl.h"
+      - "/opt/pmk/env/global/bin/OpenGL.framework/Headers/gl.h"
+      - "/Library/Apple/usr/bin/OpenGL.framework/Headers/gl.h"
+      - "/Users/daniarnugaev/.rvm/bin/OpenGL.framework/Headers/gl.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/OpenGL.framework/Headers/gl.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/OpenGL.framework/Headers/gl.h"
+      - "/opt/homebrew/include/OpenGL.framework/Headers/gl.h"
+      - "/opt/homebrew/OpenGL.framework/Headers/gl.h"
+      - "/usr/local/include/OpenGL.framework/Headers/gl.h"
+      - "/usr/local/OpenGL.framework/Headers/gl.h"
+      - "/usr/include/OpenGL.framework/Headers/gl.h"
+      - "/usr/OpenGL.framework/Headers/gl.h"
+      - "/include/OpenGL.framework/Headers/gl.h"
+      - "/usr/X11R6/include/OpenGL.framework/Headers/gl.h"
+      - "/usr/X11R6/OpenGL.framework/Headers/gl.h"
+      - "/usr/pkg/include/OpenGL.framework/Headers/gl.h"
+      - "/usr/pkg/OpenGL.framework/Headers/gl.h"
+      - "/opt/include/OpenGL.framework/Headers/gl.h"
+      - "/opt/OpenGL.framework/Headers/gl.h"
+      - "/sw/include/OpenGL.framework/Headers/gl.h"
+      - "/sw/OpenGL.framework/Headers/gl.h"
+      - "/opt/local/include/OpenGL.framework/Headers/gl.h"
+      - "/opt/local/OpenGL.framework/Headers/gl.h"
+      - "/usr/include/X11/OpenGL.framework/Headers/gl.h"
+      - "/Users/daniarnugaev/Library/Frameworks/OpenGL.framework/Headers/gl.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks/OpenGL.framework/Headers/gl.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks/OpenGL.framework/Headers/gl.h"
+    found: "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenGL.cmake:362 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "OPENGL_GLU_INCLUDE_DIR"
+    description: "Include for the OpenGL GLU library"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "OpenGL/glu.h"
+      - "GL/glu.h"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/include/"
+      - "/opt/homebrew/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/sw/include/"
+      - "/sw/"
+      - "/opt/local/include/"
+      - "/opt/local/"
+      - "/usr/include/X11/"
+      - "/Users/daniarnugaev/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/Network/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    searched_directories:
+      - "/opt/homebrew/bin/OpenGL.framework/Headers/glu.h"
+      - "/opt/homebrew/sbin/OpenGL.framework/Headers/glu.h"
+      - "/usr/local/opt/qt/bin/OpenGL.framework/Headers/glu.h"
+      - "/Users/daniarnugaev/.rbenv/shims/OpenGL.framework/Headers/glu.h"
+      - "/usr/local/opt/ruby/bin/OpenGL.framework/Headers/glu.h"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenGL.framework/Headers/glu.h"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/OpenGL.framework/Headers/glu.h"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/OpenGL.framework/Headers/glu.h"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/OpenGL.framework/Headers/glu.h"
+      - "/usr/local/bin/OpenGL.framework/Headers/glu.h"
+      - "/System/Cryptexes/App/usr/bin/OpenGL.framework/Headers/glu.h"
+      - "/usr/bin/OpenGL.framework/Headers/glu.h"
+      - "/bin/OpenGL.framework/Headers/glu.h"
+      - "/usr/sbin/OpenGL.framework/Headers/glu.h"
+      - "/sbin/OpenGL.framework/Headers/glu.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/OpenGL.framework/Headers/glu.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/OpenGL.framework/Headers/glu.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/OpenGL.framework/Headers/glu.h"
+      - "/opt/pmk/env/global/bin/OpenGL.framework/Headers/glu.h"
+      - "/Library/Apple/usr/bin/OpenGL.framework/Headers/glu.h"
+      - "/Users/daniarnugaev/.rvm/bin/OpenGL.framework/Headers/glu.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/OpenGL.framework/Headers/glu.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/OpenGL.framework/Headers/glu.h"
+      - "/opt/homebrew/include/OpenGL.framework/Headers/glu.h"
+      - "/opt/homebrew/OpenGL.framework/Headers/glu.h"
+      - "/usr/local/include/OpenGL.framework/Headers/glu.h"
+      - "/usr/local/OpenGL.framework/Headers/glu.h"
+      - "/usr/include/OpenGL.framework/Headers/glu.h"
+      - "/usr/OpenGL.framework/Headers/glu.h"
+      - "/include/OpenGL.framework/Headers/glu.h"
+      - "/usr/X11R6/include/OpenGL.framework/Headers/glu.h"
+      - "/usr/X11R6/OpenGL.framework/Headers/glu.h"
+      - "/usr/pkg/include/OpenGL.framework/Headers/glu.h"
+      - "/usr/pkg/OpenGL.framework/Headers/glu.h"
+      - "/opt/include/OpenGL.framework/Headers/glu.h"
+      - "/opt/OpenGL.framework/Headers/glu.h"
+      - "/sw/include/OpenGL.framework/Headers/glu.h"
+      - "/sw/OpenGL.framework/Headers/glu.h"
+      - "/opt/local/include/OpenGL.framework/Headers/glu.h"
+      - "/opt/local/OpenGL.framework/Headers/glu.h"
+      - "/usr/include/X11/OpenGL.framework/Headers/glu.h"
+      - "/Users/daniarnugaev/Library/Frameworks/OpenGL.framework/Headers/glu.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks/OpenGL.framework/Headers/glu.h"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks/OpenGL.framework/Headers/glu.h"
+    found: "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "/opt/homebrew/lib/cmake/glfw3/glfw3Config.cmake:2 (find_dependency)"
+      - "CMakeLists.txt:9 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-IgUpg5"
+      binary: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-IgUpg5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-IgUpg5'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e3440/fast
+        /Applications/Xcode_15.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e3440.dir/build.make CMakeFiles/cmTC_e3440.dir/build
+        Building C object CMakeFiles/cmTC_e3440.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -MD -MT CMakeFiles/cmTC_e3440.dir/src.c.o -MF CMakeFiles/cmTC_e3440.dir/src.c.o.d -o CMakeFiles/cmTC_e3440.dir/src.c.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/CMakeScratch/TryCompile-IgUpg5/src.c
+        Linking C executable cmTC_e3440
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3440.dir/link.txt --verbose=1
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e3440.dir/src.c.o -o cmTC_e3440
+        
+      exitCode: 0
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:9 (find_package)"
+    name: "glfw3"
+    configs:
+      -
+        filename: "glfw3Config.cmake"
+        kind: "cmake"
+      -
+        filename: "glfw3-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "glfw3"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/pkgRedirects/glfw3Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles/pkgRedirects/glfw3-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/glfw3Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/glfw3-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/opt/homebrew/lib/cmake/glfw3/glfw3Config.cmake"
+      mode: "config"
+      version: "3.4.0"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:517 (find_program)"
+      - "CMakeLists.txt:11 (find_package)"
+    mode: "program"
+    variable: "PKG_CONFIG_EXECUTABLE"
+    description: "pkg-config executable"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pkg-config"
+      - "pkgconf"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/opt/qt/bin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/daniarnugaev/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode_15.app/Contents/Applications/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Applications/"
+    found: "/opt/homebrew/bin/pkg-config"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/daniarnugaev/Applications"
+        - "/Applications"
+        - "/Applications/Xcode_15.app/Contents/Applications"
+        - "/Applications/Xcode_15.app/Contents/Developer/Applications"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:761 (find_library)"
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:12 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_CURL_curl"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "curl"
+    candidate_directories:
+      - "/usr/lib/"
+    searched_directories:
+      - "/usr/lib/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:765 (find_library)"
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:12 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_CURL_curl"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "curl"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
+      - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    searched_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Users/daniarnugaev/.rbenv/shims/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/daniarnugaev/.rvm/bin/"
+    found: "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libcurl.tbd"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/opt/qt/bin"
+        - "/Users/daniarnugaev/.rbenv/shims"
+        - "/usr/local/opt/ruby/bin"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/daniarnugaev/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/daniarnugaev/.rvm/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode_15.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...
