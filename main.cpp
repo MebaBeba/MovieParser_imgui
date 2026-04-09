@@ -21,6 +21,44 @@ static void glfw_error_callback(int error, const char* description)
     fprintf(stderr, "GLFW Error %d: %s\n", error, description);
 }
 
+
+void SortMovies(std::vector<Movie> &movies, ImGuiTableSortSpecs* sortSpecs){
+    if(!sortSpecs || sortSpecs->SpecsCount == 0) return;
+
+    const ImGuiTableColumnSortSpecs* spec = sortSpecs->Specs;
+
+    std::sort(movies.begin(), movies.end(), [spec](const Movie &a, const Movie &b){
+        switch(spec->ColumnIndex){
+            case 0:
+                if(spec->SortDirection == ImGuiSortDirection_Ascending){
+                    return a.title < b.title;
+                }else{
+                    return a.title > b.title;
+                }
+            case 1:
+                if(spec->SortDirection == ImGuiSortDirection_Ascending){
+                    return a.year < b.year;
+                }else{
+                    return a.year > b.year;
+                }
+            case 2:
+                if(spec->SortDirection == ImGuiSortDirection_Ascending){
+                    return a.imdbRating < b.imdbRating;
+                }else{
+                    return a.imdbRating > b.imdbRating;
+                }
+            case 3:
+                if(spec->SortDirection == ImGuiSortDirection_Ascending){
+                    return a.watched < b.watched;
+                }else{
+                    return a.watched > b.watched;
+                }
+            default:
+                return false;
+        }      
+    });
+}
+
 int main(int, char**)
 {
     glfwSetErrorCallback(glfw_error_callback);
@@ -93,7 +131,7 @@ int main(int, char**)
     char buf_LsearchMovieYear[256] = "";
 
     Movie resultMovie;
-    
+    std::vector<Movie> resultLMovies;
 
 
 #ifdef __EMSCRIPTEN__
@@ -117,6 +155,7 @@ int main(int, char**)
 
 
         ImGui::SetNextWindowSize(ImVec2(600,400));
+        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
         if(ImGui::Begin(windowTitle.c_str(), &isMainWindowOpened, ImGuiWindowFlags_NoCollapse)){
             if(isFirstFrame){
                 ImGui::OpenPopup("API key");
@@ -146,6 +185,8 @@ int main(int, char**)
                 ImGui::SameLine();
                 
                 if (ImGui::Button("Continue without API")) {
+                    globalMDB = new MovieDatabase("");
+                    isApiValid = false;
                     ImGui::CloseCurrentPopup();
                     windowTitle = "Movie Parser [w/oAPI]";
                 }
@@ -177,6 +218,27 @@ int main(int, char**)
                     ImGui::InputText("##searchMovieYear", buf_searchMovieYear, sizeof(buf_searchMovieYear));
                     if(ImGui::Button("Search (API)")){
                         resultMovie = globalMDB->searchMovie(buf_searchMovieTitle, buf_searchMovieYear);
+                        ImGui::OpenPopup("Result");
+                    }
+
+                    ImGui::SetNextWindowSize(ImVec2(400,250), ImGuiCond_Always);
+                    ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                    if (ImGui::BeginPopupModal("Result", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove)) {
+                        ImGui::Text("Title: %s", resultMovie.title.c_str());
+                        ImGui::Text("Year: %s", resultMovie.year.c_str());
+                        
+                        ImGui::NewLine();
+                        ImGui::Text("Add to collection?");
+                        if(ImGui::Button("Yes")){
+                            globalMDB->addMovie(resultMovie);
+                            ImGui::CloseCurrentPopup();
+                        }
+                        ImGui::SameLine();
+                        if(ImGui::Button("No")){
+                            ImGui::CloseCurrentPopup();
+                        }
+
+                        ImGui::EndPopup();
                     }
                     
 
@@ -192,17 +254,118 @@ int main(int, char**)
                     ImGui::SameLine();
                     ImGui::InputText("##LsearchMovieTitle", buf_LsearchMovieYear, sizeof(buf_LsearchMovieYear));
                     if(ImGui::Button("Search (Collection)")){
+                        resultLMovies = globalMDB->searchLocal(buf_LsearchMovieYear);
+                        ImGui::OpenPopup("Collection Search Results");
+                    }
+
+                    ImGui::SetNextWindowSize(ImVec2(600, 400), ImGuiCond_Always);
+                    ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                    if (ImGui::BeginPopupModal("Collection Search Results", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove)) {
                         
+                        if (resultLMovies.empty()) {
+                            ImGui::TextColored(ImVec4(1, 1, 0, 1), "No movies found in collection.");
+                        } else {
+                            ImGui::Text("Found %zu movies:", resultLMovies.size());
+                            ImGui::Separator();
+                            
+                            // Используем child window для прокрутки
+                            ImGui::BeginChild("MoviesList", ImVec2(0, 300), true);
+                            
+                            for (const auto& movie : resultLMovies) {
+                                ImGui::Text("%s (%s) - Rating: %s", 
+                                    movie.title.c_str(), 
+                                    movie.year.c_str(), 
+                                    movie.imdbRating.c_str());
+                            }
+                            
+                            ImGui::EndChild();
+                        }
+                        
+                        ImGui::Separator();
+                        if (ImGui::Button("Close", ImVec2(120, 0))) {
+                            ImGui::CloseCurrentPopup();
+                        }
+                        
+                        ImGui::EndPopup();
                     }
 
                     ImGui::EndTabItem();
                 }
                 if(ImGui::BeginTabItem("Collection")){ // View all movies
+                    static std::vector<Movie> displayMovies;
+
+                    if(globalMDB != nullptr){
+                        std::vector <Movie> newMovies = globalMDB->getAllMovies();
+                        if(displayMovies.size() != newMovies.size()){
+                            displayMovies = newMovies;
+                        }
+                    }
+
+
+                    if (ImGui::BeginTable("MoviesTable", 4, ImGuiTableFlags_Sortable | ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg)) {
+                        ImGui::TableSetupColumn("Title", ImGuiTableColumnFlags_DefaultSort);
+                        ImGui::TableSetupColumn("Year", ImGuiTableColumnFlags_None);
+                        ImGui::TableSetupColumn("Rating", ImGuiTableColumnFlags_None);
+                        ImGui::TableSetupColumn("Watched", ImGuiTableColumnFlags_None);
+                        ImGui::TableHeadersRow();
+
+
+                        ImGuiTableSortSpecs* sortSpecs = ImGui::TableGetSortSpecs();
+
+                        if(sortSpecs && sortSpecs->SpecsDirty){
+                            SortMovies(displayMovies, sortSpecs);
+                            sortSpecs->SpecsDirty = false;
+                        }
+
+                        for(const auto& movie : displayMovies){
+                            ImGui::TableNextRow();
+                            ImGui::TableSetColumnIndex(0);
+                            ImGui::Text("%s", movie.title.c_str());
+                            ImGui::TableSetColumnIndex(1);
+                            ImGui::Text("%s", movie.year.c_str());
+                            ImGui::TableSetColumnIndex(2);
+                            ImGui::Text("%s", movie.imdbRating.c_str());
+                            ImGui::TableSetColumnIndex(3);
+                            ImGui::Text("%s", movie.watched ? "Yes" : "No");
+                        }
+
+                        ImGui::EndTable();
+                    }
+                    if(ImGui::Button("Refresh")){
+                        if(globalMDB != nullptr){
+                            displayMovies = globalMDB->getAllMovies();
+                        }
+                    }
 
                     ImGui::EndTabItem();
                 }
                 if(ImGui::BeginTabItem("Statistics")){ // Show Statistics
-                    
+                    ImGui::BeginChild("qwe", ImVec2(0,330), true);
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::Text("qwe");
+                    ImGui::EndChild();
                     ImGui::EndTabItem();
                 }
                 if(ImGui::BeginTabItem("Edit")){ // Filter Movies(new window), Sort Movies(Collection), Mark as watched, Remove Movie
