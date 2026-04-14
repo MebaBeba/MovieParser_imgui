@@ -124,11 +124,16 @@ int main(int, char**)
     bool isApiValid = false;
     bool showError = false;
     bool submitted = false;
+    int collectionVersion = 0;
 
     char buf_apiKey[256] = "";
     char buf_searchMovieTitle[256] = "";
     char buf_searchMovieYear[256] = "";
     char buf_LsearchMovieYear[256] = "";
+    char buf_filterGenre[256] = "";
+    char buf_filterYear[256] = "";
+    float buf_filterRating = 0.0;
+    bool buf_filterWatched = false;
 
     Movie resultMovie;
     std::vector<Movie> resultLMovies;
@@ -231,6 +236,7 @@ int main(int, char**)
                         ImGui::Text("Add to collection?");
                         if(ImGui::Button("Yes")){
                             globalMDB->addMovie(resultMovie);
+                            collectionVersion++;
                             ImGui::CloseCurrentPopup();
                         }
                         ImGui::SameLine();
@@ -268,7 +274,6 @@ int main(int, char**)
                             ImGui::Text("Found %zu movies:", resultLMovies.size());
                             ImGui::Separator();
                             
-                            // Используем child window для прокрутки
                             ImGui::BeginChild("MoviesList", ImVec2(0, 300), true);
                             
                             for (const auto& movie : resultLMovies) {
@@ -293,14 +298,40 @@ int main(int, char**)
                 }
                 if(ImGui::BeginTabItem("Collection")){ // View all movies
                     static std::vector<Movie> displayMovies;
+                    static bool lastVersion = -1;
 
-                    if(globalMDB != nullptr){
-                        std::vector <Movie> newMovies = globalMDB->getAllMovies();
-                        if(displayMovies.size() != newMovies.size()){
-                            displayMovies = newMovies;
-                        }
+                    if(globalMDB != nullptr && collectionVersion != lastVersion){
+                        displayMovies = globalMDB->getAllMovies();
+                        lastVersion = collectionVersion;
                     }
 
+                    ImGui::SetNextItemWidth(100);
+                    ImGui::InputText("Genre", buf_filterGenre, sizeof(buf_filterGenre));
+                    ImGui::SameLine();
+                    ImGui::SetNextItemWidth(100);
+                    ImGui::InputText("Year", buf_filterYear, sizeof(buf_filterYear));
+                    ImGui::SameLine();
+                    ImGui::SetNextItemWidth(100);
+                    ImGui::SliderFloat("Min Rating", &buf_filterRating, 0, 10);
+                    ImGui::SameLine();
+                    ImGui::Checkbox("Watched only?", &buf_filterWatched);
+
+                    if(ImGui::Button("Refresh")){
+                        if(globalMDB != nullptr){
+                            displayMovies = globalMDB->filterMovies(buf_filterGenre,buf_filterYear,(double)buf_filterRating,buf_filterWatched);
+                        }
+                    }
+                    ImGui::SameLine();
+                    if(ImGui::Button("Clear Filters")){
+                        memset(buf_filterYear, 0, sizeof(buf_filterYear));
+                        memset(buf_filterGenre, 0, sizeof(buf_filterGenre));
+                        buf_filterRating = 0;
+                        buf_filterWatched = false;
+                        
+                        if(globalMDB != nullptr){
+                            displayMovies = globalMDB->getAllMovies();
+                        }
+                    }
 
                     if (ImGui::BeginTable("MoviesTable", 4, ImGuiTableFlags_Sortable | ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg)) {
                         ImGui::TableSetupColumn("Title", ImGuiTableColumnFlags_DefaultSort);
@@ -331,41 +362,37 @@ int main(int, char**)
 
                         ImGui::EndTable();
                     }
-                    if(ImGui::Button("Refresh")){
-                        if(globalMDB != nullptr){
-                            displayMovies = globalMDB->getAllMovies();
-                        }
-                    }
 
                     ImGui::EndTabItem();
                 }
                 if(ImGui::BeginTabItem("Statistics")){ // Show Statistics
-                    ImGui::BeginChild("qwe", ImVec2(0,330), true);
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::Text("qwe");
-                    ImGui::EndChild();
+                    static std::vector<Movie> movies = globalMDB->getAllMovies();
+                    ImGui::Text("Total movies: %zu", movies.size());
+                    ImGui::SameLine();
+                    ImGui::Text("Watched: %d", globalMDB->getWatchedCount());
+                    ImGui::SameLine();
+                    ImGui::Text("Avg Rating: %.2f/10", globalMDB->getAverageRating());
+
+                    if(ImGui::BeginTable("Statistic", 3, ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg)){
+                        ImGui::TableSetupColumn("Actors");
+                        ImGui::TableSetupColumn("Directors");
+                        ImGui::TableSetupColumn("Genres");
+                        ImGui::TableHeadersRow();
+
+                        static auto actors = globalMDB->getTopActors();
+                        static std::vector<std::pair<std::string, int>> sortedActors(actors.begin(), actors.end());
+                        std::sort(sortedActors.begin(), sortedActors.end(),
+                                [](const auto& a, const auto& b){ return a.second > b.second; });
+    
+                        for(const auto&[actor, count] : sortedActors){
+                            ImGui::TableNextRow();
+                            ImGui::TableSetColumnIndex(0);
+                            ImGui::Text("%s, %d", actor.c_str(), count);
+                            ImGui::TableSetColumnIndex(1);
+                        }
+                        ImGui::EndTable();
+                    }
+
                     ImGui::EndTabItem();
                 }
                 if(ImGui::BeginTabItem("Edit")){ // Filter Movies(new window), Sort Movies(Collection), Mark as watched, Remove Movie

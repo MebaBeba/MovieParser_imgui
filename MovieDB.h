@@ -76,6 +76,10 @@ public:
     std::map<std::string, int> getTopDirectors() const;
     
     std::map<std::string, int> getGenreDistribution() const;
+
+    int getWatchedCount() const;
+    
+    double getAverageRating() const;
 };
 
 

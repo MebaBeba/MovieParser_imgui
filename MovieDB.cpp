@@ -324,6 +324,32 @@ std::map<std::string, int> MovieDatabase::getGenreDistribution() const{
     return genres;
 }
 
+int MovieDatabase::getWatchedCount() const{
+    int watched = std::count_if(movies.begin(), movies.end(), [](const Movie& movie){
+        return movie.watched;
+    });
+
+    return watched;
+}
+
+double MovieDatabase::getAverageRating() const{
+    double totalRating = 0;
+    int ratedCount = 0;
+    for(const Movie& movie : movies){
+        if(!movie.imdbRating.empty() && movie.imdbRating != "N/A"){
+            try{
+                totalRating += std::stod(movie.imdbRating);
+                ratedCount++;
+            }catch(...) {}
+        }
+    }
+    if(ratedCount > 0){
+        return totalRating / ratedCount;
+    }
+}
+
+
+
 
 void MovieDatabase::showStatistics() const{
     std::cout << "\n========== STATISTICS ==========\n";
