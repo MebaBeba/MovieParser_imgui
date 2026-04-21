@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o"
+  "CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o.d"
   "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o"
   "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o.d"
   "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o"

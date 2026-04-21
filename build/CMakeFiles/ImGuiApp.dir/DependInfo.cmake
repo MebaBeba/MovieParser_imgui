@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/ImGuiFileDialog.cpp" "CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o" "gcc" "CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o.d"
   "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_glfw.cpp" "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o" "gcc" "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o.d"
   "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_opengl3.cpp" "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o.d"
   "/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui.cpp" "CMakeFiles/ImGuiApp.dir/ImGui/imgui.cpp.o" "gcc" "CMakeFiles/ImGuiApp.dir/ImGui/imgui.cpp.o.d"

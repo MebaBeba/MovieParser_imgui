@@ -58,6 +58,10 @@ MovieDatabase::MovieDatabase(const std::string &key, const std::string &file) : 
     loadFromFile();
 }
 
+MovieDatabase::~MovieDatabase(){
+    saveToFile();
+}
+
 void MovieDatabase::loadFromFile(){
     std::ifstream file(dataFile);
     if(file.is_open()){
@@ -198,12 +202,26 @@ Movie MovieDatabase::searchMovie(const std::string& title, const std::string &ye
     return Movie::fromJson(j);
 }
 
-void MovieDatabase::markAsWatched(const std::string& imdbID, const std::string& personalRating){
-    auto it = std::find_if(movies.begin(), movies.end(), 
-        [&imdbID](const Movie &m){ return m.imdbID == imdbID; });
+void MovieDatabase::markAsWatched(const std::string& title){
+    auto it = std::find_if(movies.begin(), movies.end(), [&title](const Movie& movie){
+        return movie.title == title;
+    });
 
     if(it != movies.end()){
-        it->watched = true;
+        if(it->watched == false){
+            it->watched = true;
+        }else{
+            it->watched = false;
+        }
+    }
+}
+
+void MovieDatabase::setPersonalRating(const std::string& title, const std::string& personalRating){
+    auto it = std::find_if(movies.begin(), movies.end(), [&title](const Movie& movie){
+        return movie.title == title;
+    });
+
+    if(it != movies.end()){
         it->personalRating = personalRating;
     }
 }

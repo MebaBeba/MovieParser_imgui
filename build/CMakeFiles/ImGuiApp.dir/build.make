@@ -170,10 +170,24 @@ CMakeFiles/ImGuiApp.dir/ImGui/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ImGuiApp.dir/ImGui/imgui_widgets.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/imgui_widgets.cpp -o CMakeFiles/ImGuiApp.dir/ImGui/imgui_widgets.cpp.s
 
+CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o: CMakeFiles/ImGuiApp.dir/flags.make
+CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o: /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/ImGuiFileDialog.cpp
+CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o: CMakeFiles/ImGuiApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o -MF CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o.d -o CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/ImGuiFileDialog.cpp
+
+CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/ImGuiFileDialog.cpp > CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.i
+
+CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/ImGuiFileDialog.cpp -o CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.s
+
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/ImGuiApp.dir/flags.make
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o: /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_glfw.cpp
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/ImGuiApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -x objective-c++ -MD -MT CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_glfw.cpp
 
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/ImGuiApp.dir/flags.make
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o: /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_opengl3.cpp
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/ImGuiApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o -c /Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/ImGui/backends/imgui_impl_opengl3.cpp
 
 CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.i: cmake_force
@@ -207,6 +221,7 @@ ImGuiApp_OBJECTS = \
 "CMakeFiles/ImGuiApp.dir/ImGui/imgui_draw.cpp.o" \
 "CMakeFiles/ImGuiApp.dir/ImGui/imgui_tables.cpp.o" \
 "CMakeFiles/ImGuiApp.dir/ImGui/imgui_widgets.cpp.o" \
+"CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o" \
 "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o" \
 "CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o"
 
@@ -220,12 +235,13 @@ ImGuiApp: CMakeFiles/ImGuiApp.dir/ImGui/imgui_demo.cpp.o
 ImGuiApp: CMakeFiles/ImGuiApp.dir/ImGui/imgui_draw.cpp.o
 ImGuiApp: CMakeFiles/ImGuiApp.dir/ImGui/imgui_tables.cpp.o
 ImGuiApp: CMakeFiles/ImGuiApp.dir/ImGui/imgui_widgets.cpp.o
+ImGuiApp: CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o
 ImGuiApp: CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_glfw.cpp.o
 ImGuiApp: CMakeFiles/ImGuiApp.dir/ImGui/backends/imgui_impl_opengl3.cpp.o
 ImGuiApp: CMakeFiles/ImGuiApp.dir/build.make
 ImGuiApp: /opt/homebrew/lib/libglfw.3.4.dylib
 ImGuiApp: CMakeFiles/ImGuiApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ImGuiApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/daniarnugaev/Documents/C++/MyProgramms/MovieParser_imgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ImGuiApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ImGuiApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

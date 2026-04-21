@@ -45,6 +45,8 @@ class MovieDatabase{
 public:
     MovieDatabase(const std::string &key, const std::string &file = "movies.json");
 
+    ~MovieDatabase();
+
     Movie searchMovie(const std::string& title, const std::string& year = "");
 
     bool isAPIKeyValid() const;
@@ -53,7 +55,9 @@ public:
     
     bool removeMovie(const std::string& imdbID);
     
-    void markAsWatched(const std::string& imdbID, const std::string& personalRating = "");
+    void markAsWatched(const std::string& title);
+
+    void setPersonalRating(const std::string& title, const std::string& personalRating);
     
     std::vector<Movie> searchLocal(const std::string& query) const;
     

@@ -7,6 +7,8 @@
 #include <GLES2/gl2.h>
 #endif
 #include <GLFW/glfw3.h>
+#include <fstream>
+#include "ImGuiFileDialog.h"
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1900) && !defined(IMGUI_DISABLE_WIN32_FUNCTIONS)
 #pragma comment(lib, "legacy_stdio_definitions")
@@ -57,6 +59,26 @@ void SortMovies(std::vector<Movie> &movies, ImGuiTableSortSpecs* sortSpecs){
                 return false;
         }      
     });
+}
+
+bool exportToCSV(const std::vector<Movie>& movies, const std::string& filename = "movies_export.csv"){
+    std::ofstream file(filename);
+    if(file.is_open()){
+        file << "Title,Year,IMDB Rating,Genre,Director,Actors,Watched,Personal Rating\n";
+        for(const Movie& movie : movies){
+            file << "\"" << movie.title << "\","
+                 << movie.year << ","
+                 << movie.imdbRating << ","
+                 << "\"" << movie.genre << "\","
+                 << "\"" << movie.director << "\","
+                 << "\"" << movie.actors << "\","
+                 << (movie.watched ? "Yes" : "No") << ","
+                 << "\"" << movie.personalRating << "\"\n";
+        }
+        return true;
+    } else {
+        return false;
+    }
 }
 
 int main(int, char**)
@@ -118,7 +140,7 @@ int main(int, char**)
     std::string windowTitle = "Movie Parser";
     
     std::string APIkey;
-    MovieDatabase *globalMDB = nullptr;
+    std::unique_ptr<MovieDatabase> globalMDB;
 
     bool isFirstFrame = true;
     bool isApiValid = false;
@@ -134,10 +156,13 @@ int main(int, char**)
     char buf_filterYear[256] = "";
     float buf_filterRating = 0.0;
     bool buf_filterWatched = false;
+    char buf_CSVFileName[256] = "";
+    char buf_JsonFileName[256] = "";
 
     Movie resultMovie;
     std::vector<Movie> resultLMovies;
 
+    static std::string exportFilePath = "";
 
 #ifdef __EMSCRIPTEN__
     io.IniFilename = nullptr;
@@ -180,7 +205,7 @@ int main(int, char**)
                 
                 if (ImGui::Button("Submit")) {
                     if (strlen(buf_apiKey) > 0) { 
-                        globalMDB = new MovieDatabase(buf_apiKey);
+                        globalMDB.reset(new MovieDatabase(buf_apiKey));
                         isApiValid = globalMDB->isAPIKeyValid();
                         submitted = true;
                         showError = !isApiValid;
@@ -190,7 +215,7 @@ int main(int, char**)
                 ImGui::SameLine();
                 
                 if (ImGui::Button("Continue without API")) {
-                    globalMDB = new MovieDatabase("");
+                    globalMDB.reset(new MovieDatabase(""));
                     isApiValid = false;
                     ImGui::CloseCurrentPopup();
                     windowTitle = "Movie Parser [w/oAPI]";
@@ -298,7 +323,10 @@ int main(int, char**)
                 }
                 if(ImGui::BeginTabItem("Collection")){ // View all movies
                     static std::vector<Movie> displayMovies;
-                    static bool lastVersion = -1;
+                    static int lastVersion = -1;
+                    static Movie selectedMovie;
+                    static Movie selectedMovieInfo;
+
 
                     if(globalMDB != nullptr && collectionVersion != lastVersion){
                         displayMovies = globalMDB->getAllMovies();
@@ -333,11 +361,12 @@ int main(int, char**)
                         }
                     }
 
-                    if (ImGui::BeginTable("MoviesTable", 4, ImGuiTableFlags_Sortable | ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg)) {
+                    if (ImGui::BeginTable("MoviesTable", 5, ImGuiTableFlags_Sortable | ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg)) {
                         ImGui::TableSetupColumn("Title", ImGuiTableColumnFlags_DefaultSort);
-                        ImGui::TableSetupColumn("Year", ImGuiTableColumnFlags_None);
-                        ImGui::TableSetupColumn("Rating", ImGuiTableColumnFlags_None);
-                        ImGui::TableSetupColumn("Watched", ImGuiTableColumnFlags_None);
+                        ImGui::TableSetupColumn("Year", ImGuiTableColumnFlags_WidthFixed, 60.0f);
+                        ImGui::TableSetupColumn("Rating", ImGuiTableColumnFlags_WidthFixed, 60.0f);
+                        ImGui::TableSetupColumn("Watched", ImGuiTableColumnFlags_WidthFixed, 60.0f);
+                        ImGui::TableSetupColumn("Actions", ImGuiTableColumnFlags_WidthFixed, 60.0f);
                         ImGui::TableHeadersRow();
 
 
@@ -348,7 +377,7 @@ int main(int, char**)
                             sortSpecs->SpecsDirty = false;
                         }
 
-                        for(const auto& movie : displayMovies){
+                        for(auto& movie : displayMovies){
                             ImGui::TableNextRow();
                             ImGui::TableSetColumnIndex(0);
                             ImGui::Text("%s", movie.title.c_str());
@@ -358,15 +387,87 @@ int main(int, char**)
                             ImGui::Text("%s", movie.imdbRating.c_str());
                             ImGui::TableSetColumnIndex(3);
                             ImGui::Text("%s", movie.watched ? "Yes" : "No");
-                        }
 
+                            ImGui::TableSetColumnIndex(4);
+                            ImGui::PushID(movie.imdbID.c_str());
+                            if(ImGui::Button("...")){
+                                selectedMovie = movie;
+                                ImGui::OpenPopup("MovieActions");
+                            }
+                            ImGui::SameLine();
+                            if(ImGui::Button("i")){
+                                selectedMovieInfo = movie;
+                                ImGui::OpenPopup("MovieInformation");
+                            }
+
+                            ImGui::SetNextWindowSize(ImVec2(250, 120), ImGuiCond_Always);
+                            ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                            if(ImGui::BeginPopupModal("MovieActions", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove)){
+                                ImGui::Text("Movie: %s", selectedMovie.title.c_str());
+                                static bool checkWatched = false;
+                                static float buf_personalRating = 0.0;
+
+                                if(ImGui::IsWindowAppearing()){
+                                    checkWatched = selectedMovie.watched;
+                                    buf_personalRating = selectedMovie.personalRating.empty() ? 0.0f : atof(selectedMovie.personalRating.c_str());
+                                }
+
+                                if(ImGui::Button("Remove")){
+                                    globalMDB->removeMovie(selectedMovie.imdbID);
+                                    collectionVersion++;
+                                    ImGui::CloseCurrentPopup();
+                                }
+                                ImGui::SameLine();
+                                if(ImGui::Checkbox("Watched", &checkWatched)){
+                                    globalMDB->markAsWatched(selectedMovie.title);
+                                    collectionVersion++;
+                                }
+                                
+                                ImGui::SetNextItemWidth(100.0f);
+                                if(ImGui::SliderFloat("Personal Rating", &buf_personalRating, 0, 10, "%.1f")){
+                                    globalMDB->setPersonalRating(selectedMovie.title, std::to_string(buf_personalRating));
+                                    collectionVersion++;
+                                }
+
+                                if(ImGui::Button("Close")){
+                                    ImGui::CloseCurrentPopup();
+                                }
+                                ImGui::EndPopup();
+                            }
+
+                            ImGui::SetNextWindowSize(ImVec2(450, 310), ImGuiCond_Always);
+                            ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                            if(ImGui::BeginPopupModal("MovieInformation", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove)){
+                                ImGui::Text("IMDbID: %s", selectedMovieInfo.imdbID.c_str());
+                                ImGui::Text("Title: %s", selectedMovieInfo.title.c_str());
+                                ImGui::Text("Year: %s", selectedMovieInfo.year.c_str());
+                                ImGui::Text("Released: %s", selectedMovieInfo.released.c_str());
+                                ImGui::Text("Runtime: %s", selectedMovieInfo.runtime.c_str());
+                                ImGui::Text("Genre: %s", selectedMovieInfo.genre.c_str());
+                                ImGui::Text("Director: %s", selectedMovieInfo.director.c_str());
+                                ImGui::Text("Writer: %s", selectedMovieInfo.writer.c_str());
+                                ImGui::Text("Actors: %s", selectedMovieInfo.actors.c_str());
+                                ImGui::Text("Language: %s", selectedMovieInfo.language.c_str());
+                                ImGui::Text("Country: %s", selectedMovieInfo.country.c_str());
+                                ImGui::Text("Awards: %s", selectedMovieInfo.awards.c_str());
+                                ImGui::Text("ImdbRating: %s", selectedMovieInfo.imdbRating.c_str());
+                                ImGui::Text("Watched: %s", selectedMovieInfo.watched ? "Yes" : "No");
+                                ImGui::Text("PersonalRating: %s", selectedMovieInfo.personalRating == "" ? "None" : selectedMovieInfo.personalRating.c_str());
+
+                                if(ImGui::Button("Close")){
+                                    ImGui::CloseCurrentPopup();
+                                }
+                                ImGui::EndPopup();
+                            }
+                            ImGui::PopID();
+                        }
                         ImGui::EndTable();
                     }
-
+                
                     ImGui::EndTabItem();
                 }
                 if(ImGui::BeginTabItem("Statistics")){ // Show Statistics
-                    static std::vector<Movie> movies = globalMDB->getAllMovies();
+                    std::vector<Movie> movies = globalMDB->getAllMovies();
                     ImGui::Text("Total movies: %zu", movies.size());
                     ImGui::SameLine();
                     ImGui::Text("Watched: %d", globalMDB->getWatchedCount());
@@ -379,28 +480,95 @@ int main(int, char**)
                         ImGui::TableSetupColumn("Genres");
                         ImGui::TableHeadersRow();
 
-                        static auto actors = globalMDB->getTopActors();
-                        static std::vector<std::pair<std::string, int>> sortedActors(actors.begin(), actors.end());
+                        auto actors = globalMDB->getTopActors();
+                        std::vector<std::pair<std::string, int>> sortedActors(actors.begin(), actors.end());
                         std::sort(sortedActors.begin(), sortedActors.end(),
                                 [](const auto& a, const auto& b){ return a.second > b.second; });
+
+                        auto directors = globalMDB->getTopDirectors();
+                        std::vector<std::pair<std::string, int>> sortedDirectors(directors.begin(), directors.end());
+                        std::sort(sortedDirectors.begin(), sortedDirectors.end(),
+                                [](const auto& a, const auto& b){ return a.second > b.second; });
+
+                        auto genres = globalMDB->getGenreDistribution();
+                        std::vector<std::pair<std::string, int>> sortedGenres(genres.begin(), genres.end());
+                        std::sort(sortedGenres.begin(), sortedGenres.end(),
+                                [](const auto& a, const auto& b){ return a.second > b.second; });
     
-                        for(const auto&[actor, count] : sortedActors){
+                        size_t maxRows = std::max({sortedActors.size(), sortedDirectors.size(), sortedGenres.size()});
+
+                        for(size_t i = 0; i < maxRows; ++i){
                             ImGui::TableNextRow();
                             ImGui::TableSetColumnIndex(0);
-                            ImGui::Text("%s, %d", actor.c_str(), count);
+                            if (i < sortedActors.size()) {
+                                ImGui::Text("%s (%d)", sortedActors[i].first.c_str(), sortedActors[i].second);
+                            } else {
+                                ImGui::Text(""); 
+                            }
+                            
                             ImGui::TableSetColumnIndex(1);
+                            if (i < sortedDirectors.size()) {
+                                ImGui::Text("%s (%d)", sortedDirectors[i].first.c_str(), sortedDirectors[i].second);
+                            } else {
+                                ImGui::Text("");
+                            }
+                            
+                            ImGui::TableSetColumnIndex(2);
+                            if (i < sortedGenres.size()) {
+                                ImGui::Text("%s (%d)", sortedGenres[i].first.c_str(), sortedGenres[i].second);
+                            } else {
+                                ImGui::Text("");
+                            }
                         }
                         ImGui::EndTable();
                     }
 
                     ImGui::EndTabItem();
                 }
-                if(ImGui::BeginTabItem("Edit")){ // Filter Movies(new window), Sort Movies(Collection), Mark as watched, Remove Movie
-
-                    ImGui::EndTabItem();
-                }
                 if(ImGui::BeginTabItem("File")){ //Download csv,json files
-
+                        if(ImGui::Button("Export to CSV")){
+                            // Новый синтаксис - используем Instance() как указатель
+                            ImGuiFileDialog::Instance()->OpenDialog("ExportCSV", "Export CSV File", ".csv");
+                        }
+                        
+                        // Отображение диалога
+                        if(ImGuiFileDialog::Instance()->Display("ExportCSV")){
+                            if(ImGuiFileDialog::Instance()->IsOk()){
+                                std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
+                                auto movies = globalMDB->getAllMovies();
+                                
+                                if(exportToCSV(movies, filePathName)){
+                                    ImGui::OpenPopup("ExportSuccess");
+                                } else {
+                                    ImGui::OpenPopup("ExportError");
+                                }
+                            }
+                            ImGuiFileDialog::Instance()->Close();
+                        }
+                        
+                        // Попап успеха
+                        ImGui::SetNextWindowSize(ImVec2(300, 100), ImGuiCond_Always);
+                        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                        if(ImGui::BeginPopupModal("ExportSuccess", NULL, ImGuiWindowFlags_NoResize)){
+                            ImGui::TextColored(ImVec4(0,1,0,1), "Export successful!");
+                            if(ImGui::Button("OK")){
+                                ImGui::CloseCurrentPopup();
+                            }
+                            ImGui::EndPopup();
+                        }
+                        
+                        // Попап ошибки
+                        ImGui::SetNextWindowSize(ImVec2(300, 100), ImGuiCond_Always);
+                        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                        if(ImGui::BeginPopupModal("ExportError", NULL, ImGuiWindowFlags_NoResize)){
+                            ImGui::TextColored(ImVec4(1,0,0,1), "Export failed!");
+                            ImGui::Text("Check file permissions.");
+                            if(ImGui::Button("OK")){
+                                ImGui::CloseCurrentPopup();
+                            }
+                            ImGui::EndPopup();
+                        }
+                    
                     ImGui::EndTabItem();
                 }
                 ImGui::EndTabBar();

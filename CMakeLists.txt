@@ -20,6 +20,7 @@ set(IMGUI_SOURCES
     ${IMGUI_DIR}/imgui_draw.cpp
     ${IMGUI_DIR}/imgui_tables.cpp
     ${IMGUI_DIR}/imgui_widgets.cpp
+    ${IMGUI_DIR}/ImGuiFileDialog.cpp
     ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp      # ADD THIS BACK
     ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
 )
@@ -28,6 +29,8 @@ set(IMGUI_HEADERS
     ${IMGUI_DIR}/imgui.h
     ${IMGUI_DIR}/imgui_internal.h
     ${IMGUI_DIR}/imconfig.h
+    ${IMGUI_DIR}/ImGuiFileDialog.h
+    ${IMGUI_DIR}/ImGuiFileDialogConfig.h
     ${IMGUI_DIR}/backends/imgui_impl_glfw.h
     ${IMGUI_DIR}/backends/imgui_impl_opengl3.h
 )

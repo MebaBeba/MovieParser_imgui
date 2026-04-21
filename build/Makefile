@@ -129,6 +129,30 @@ ImGuiApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiApp.dir/build.make CMakeFiles/ImGuiApp.dir/build
 .PHONY : ImGuiApp/fast
 
+ImGui/ImGuiFileDialog.o: ImGui/ImGuiFileDialog.cpp.o
+.PHONY : ImGui/ImGuiFileDialog.o
+
+# target to build an object file
+ImGui/ImGuiFileDialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiApp.dir/build.make CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.o
+.PHONY : ImGui/ImGuiFileDialog.cpp.o
+
+ImGui/ImGuiFileDialog.i: ImGui/ImGuiFileDialog.cpp.i
+.PHONY : ImGui/ImGuiFileDialog.i
+
+# target to preprocess a source file
+ImGui/ImGuiFileDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiApp.dir/build.make CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.i
+.PHONY : ImGui/ImGuiFileDialog.cpp.i
+
+ImGui/ImGuiFileDialog.s: ImGui/ImGuiFileDialog.cpp.s
+.PHONY : ImGui/ImGuiFileDialog.s
+
+# target to generate assembly for a file
+ImGui/ImGuiFileDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImGuiApp.dir/build.make CMakeFiles/ImGuiApp.dir/ImGui/ImGuiFileDialog.cpp.s
+.PHONY : ImGui/ImGuiFileDialog.cpp.s
+
 ImGui/backends/imgui_impl_glfw.o: ImGui/backends/imgui_impl_glfw.cpp.o
 .PHONY : ImGui/backends/imgui_impl_glfw.o
 
@@ -354,6 +378,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ImGuiApp"
+	@echo "... ImGui/ImGuiFileDialog.o"
+	@echo "... ImGui/ImGuiFileDialog.i"
+	@echo "... ImGui/ImGuiFileDialog.s"
 	@echo "... ImGui/backends/imgui_impl_glfw.o"
 	@echo "... ImGui/backends/imgui_impl_glfw.i"
 	@echo "... ImGui/backends/imgui_impl_glfw.s"
