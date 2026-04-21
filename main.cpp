@@ -9,6 +9,7 @@
 #include <GLFW/glfw3.h>
 #include <fstream>
 #include "ImGuiFileDialog.h"
+#include <iostream>
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1900) && !defined(IMGUI_DISABLE_WIN32_FUNCTIONS)
 #pragma comment(lib, "legacy_stdio_definitions")
@@ -205,7 +206,7 @@ int main(int, char**)
                 
                 if (ImGui::Button("Submit")) {
                     if (strlen(buf_apiKey) > 0) { 
-                        globalMDB.reset(new MovieDatabase(buf_apiKey));
+                        globalMDB.reset(new MovieDatabase(buf_apiKey, "../movies.json"));
                         isApiValid = globalMDB->isAPIKeyValid();
                         submitted = true;
                         showError = !isApiValid;
@@ -215,7 +216,7 @@ int main(int, char**)
                 ImGui::SameLine();
                 
                 if (ImGui::Button("Continue without API")) {
-                    globalMDB.reset(new MovieDatabase(""));
+                    globalMDB.reset(new MovieDatabase("", "../movies.json"));
                     isApiValid = false;
                     ImGui::CloseCurrentPopup();
                     windowTitle = "Movie Parser [w/oAPI]";
@@ -247,8 +248,24 @@ int main(int, char**)
                     ImGui::SameLine();
                     ImGui::InputText("##searchMovieYear", buf_searchMovieYear, sizeof(buf_searchMovieYear));
                     if(ImGui::Button("Search (API)")){
-                        resultMovie = globalMDB->searchMovie(buf_searchMovieTitle, buf_searchMovieYear);
-                        ImGui::OpenPopup("Result");
+                        try{
+                            resultMovie = globalMDB->searchMovie(buf_searchMovieTitle, buf_searchMovieYear);
+                            ImGui::OpenPopup("Result");
+                        }catch(std::exception& e){
+                            std::cerr << "Error: " << e.what() << std::endl;
+                            ImGui::OpenPopup("Movie not found");
+                            resultMovie = {};
+                        }
+                    }
+
+                    ImGui::SetNextWindowSize(ImVec2(150,75), ImGuiCond_Always);
+                    ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                    if(ImGui::BeginPopupModal("Movie not found", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove)){
+                        ImGui::Text("Movie not found!");
+                        if(ImGui::Button("Close")){
+                            ImGui::CloseCurrentPopup();
+                        }
+                        ImGui::EndPopup();
                     }
 
                     ImGui::SetNextWindowSize(ImVec2(400,250), ImGuiCond_Always);
@@ -527,12 +544,15 @@ int main(int, char**)
                 }
                 if(ImGui::BeginTabItem("File")){ //Download csv,json files
                         if(ImGui::Button("Export to CSV")){
-                            // Новый синтаксис - используем Instance() как указатель
                             ImGuiFileDialog::Instance()->OpenDialog("ExportCSV", "Export CSV File", ".csv");
                         }
+
+                        if(ImGui::Button("Download JSON File")){
+                            ImGuiFileDialog::Instance()->OpenDialog("DownloadJSON", "Download JSON File", ".json");
+                        }
                         
-                        // Отображение диалога
-                        if(ImGuiFileDialog::Instance()->Display("ExportCSV")){
+                        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                        if(ImGuiFileDialog::Instance()->Display("ExportCSV", ImGuiWindowFlags_None, ImVec2(600,450))){
                             if(ImGuiFileDialog::Instance()->IsOk()){
                                 std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
                                 auto movies = globalMDB->getAllMovies();
@@ -545,9 +565,29 @@ int main(int, char**)
                             }
                             ImGuiFileDialog::Instance()->Close();
                         }
+
+                        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                        if(ImGuiFileDialog::Instance()->Display("DownloadJSON", ImGuiWindowFlags_None, ImVec2(600,450))){
+                            if(ImGuiFileDialog::Instance()->IsOk()){
+                                std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
+
+                                std::string sourcePath = "../movies.json";
+
+                                if(std::filesystem::exists(sourcePath)){
+                                    try{
+                                        std::filesystem::copy(sourcePath, filePathName, std::filesystem::copy_options::overwrite_existing);
+                                        ImGui::OpenPopup("DownloadSucces");
+                                    }catch(const std::exception& e){
+                                        std::cerr << "Copy failed: " << e.what() << std::endl;
+                                        ImGui::OpenPopup("DownloadError");
+                                    }
+                                }
+                            }
+                            ImGuiFileDialog::Instance()->Close();
+                        }
+
                         
-                        // Попап успеха
-                        ImGui::SetNextWindowSize(ImVec2(300, 100), ImGuiCond_Always);
+                        ImGui::SetNextWindowSize(ImVec2(200, 75), ImGuiCond_Always);
                         ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
                         if(ImGui::BeginPopupModal("ExportSuccess", NULL, ImGuiWindowFlags_NoResize)){
                             ImGui::TextColored(ImVec4(0,1,0,1), "Export successful!");
@@ -557,12 +597,31 @@ int main(int, char**)
                             ImGui::EndPopup();
                         }
                         
-                        // Попап ошибки
-                        ImGui::SetNextWindowSize(ImVec2(300, 100), ImGuiCond_Always);
+                        ImGui::SetNextWindowSize(ImVec2(200, 75), ImGuiCond_Always);
                         ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
                         if(ImGui::BeginPopupModal("ExportError", NULL, ImGuiWindowFlags_NoResize)){
                             ImGui::TextColored(ImVec4(1,0,0,1), "Export failed!");
                             ImGui::Text("Check file permissions.");
+                            if(ImGui::Button("OK")){
+                                ImGui::CloseCurrentPopup();
+                            }
+                            ImGui::EndPopup();
+                        }
+
+                        ImGui::SetNextWindowSize(ImVec2(200, 75), ImGuiCond_Always);
+                        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                        if(ImGui::BeginPopupModal("DownloadSucces", NULL, ImGuiWindowFlags_NoResize)){
+                            ImGui::TextColored(ImVec4(0,1,0,1), "Dwonload successful!");
+                            if(ImGui::Button("OK")){
+                                ImGui::CloseCurrentPopup();
+                            }
+                            ImGui::EndPopup();
+                        }
+                        
+                        ImGui::SetNextWindowSize(ImVec2(200, 75), ImGuiCond_Always);
+                        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+                        if(ImGui::BeginPopupModal("DownloadError", NULL, ImGuiWindowFlags_NoResize)){
+                            ImGui::TextColored(ImVec4(1,0,0,1), "Download failed!");
                             if(ImGui::Button("OK")){
                                 ImGui::CloseCurrentPopup();
                             }
