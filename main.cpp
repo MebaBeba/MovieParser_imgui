@@ -134,7 +134,8 @@ int main(int, char**)
 #endif
     ImGui_ImplOpenGL3_Init(glsl_version);
 
-    ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+    //ImVec4 backgroundColor = ImVec4(0.0f, 0.0f, 0.0f, 1.00f);
+    ImVec4 clear_color = ImVec4(0.1f, 0.25f, 0.30f, 1.00f);
 
     bool isMainWindowOpened = true;
 
@@ -183,7 +184,6 @@ int main(int, char**)
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-
 
         ImGui::SetNextWindowSize(ImVec2(600,400));
         ImGui::SetNextWindowPos(ImGui::GetMainViewport()->GetCenter(), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
@@ -542,7 +542,7 @@ int main(int, char**)
 
                     ImGui::EndTabItem();
                 }
-                if(ImGui::BeginTabItem("File")){ //Download csv,json files
+                if(ImGui::BeginTabItem("File / Customization")){ //Download csv,json files, Color Customization
                         if(ImGui::Button("Export to CSV")){
                             ImGuiFileDialog::Instance()->OpenDialog("ExportCSV", "Export CSV File", ".csv");
                         }
@@ -626,6 +626,418 @@ int main(int, char**)
                                 ImGui::CloseCurrentPopup();
                             }
                             ImGui::EndPopup();
+                        }
+
+                        ImGui::Separator();
+                        if(ImGui::CollapsingHeader("Color Customization")){
+                            ImGui::Text("Themes");
+                            if(ImGui::Button("Sakura")){
+                                ImGui::StyleColorsDark();
+                                ImVec4* colors = ImGui::GetStyle().Colors;
+                                colors[ImGuiCol_WindowBg] = ImVec4(0.12f, 0.08f, 0.15f, 1.00f);
+                                colors[ImGuiCol_TitleBg] = ImVec4(0.80f, 0.40f, 0.60f, 0.70f);
+                                colors[ImGuiCol_TitleBgActive] = ImVec4(0.85f, 0.45f, 0.65f, 0.90f);
+                                colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.70f, 0.35f, 0.55f, 0.50f);
+                                colors[ImGuiCol_Button] = ImVec4(0.80f, 0.40f, 0.60f, 0.85f);
+                                colors[ImGuiCol_ButtonHovered] = ImVec4(0.90f, 0.50f, 0.70f, 1.00f);
+                                colors[ImGuiCol_ButtonActive] = ImVec4(0.70f, 0.30f, 0.50f, 1.00f);
+                                colors[ImGuiCol_Header] = ImVec4(0.80f, 0.40f, 0.60f, 0.70f);
+                                colors[ImGuiCol_HeaderHovered] = ImVec4(0.85f, 0.45f, 0.65f, 0.85f);
+                                colors[ImGuiCol_HeaderActive] = ImVec4(0.75f, 0.35f, 0.55f, 0.90f);
+                                colors[ImGuiCol_FrameBg] = ImVec4(0.20f, 0.12f, 0.25f, 0.80f);
+                                colors[ImGuiCol_FrameBgHovered] = ImVec4(0.25f, 0.16f, 0.30f, 0.90f);
+                                colors[ImGuiCol_FrameBgActive] = ImVec4(0.30f, 0.20f, 0.35f, 1.00f);
+                                colors[ImGuiCol_Tab] = ImVec4(0.70f, 0.35f, 0.55f, 0.60f);
+                                colors[ImGuiCol_TabHovered] = ImVec4(0.85f, 0.45f, 0.65f, 0.80f);
+                                colors[ImGuiCol_TabActive] = ImVec4(0.80f, 0.40f, 0.60f, 1.00f);
+                                colors[ImGuiCol_TabUnfocused] = ImVec4(0.50f, 0.25f, 0.40f, 0.50f);
+                                colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.70f, 0.35f, 0.55f, 0.80f);
+                                colors[ImGuiCol_TableHeaderBg] = ImVec4(0.70f, 0.35f, 0.55f, 0.80f);
+                                colors[ImGuiCol_TableBorderLight] = ImVec4(0.60f, 0.35f, 0.50f, 0.50f);
+                                colors[ImGuiCol_TableBorderStrong] = ImVec4(0.80f, 0.45f, 0.65f, 0.80f);
+                                colors[ImGuiCol_TableRowBg] = ImVec4(0.12f, 0.08f, 0.15f, 0.60f);
+                                colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.15f, 0.10f, 0.18f, 0.80f);
+                                colors[ImGuiCol_Text] = ImVec4(1.00f, 0.90f, 0.95f, 1.00f);
+                                colors[ImGuiCol_TextDisabled] = ImVec4(0.60f, 0.45f, 0.55f, 1.00f);
+                                colors[ImGuiCol_Border] = ImVec4(0.70f, 0.40f, 0.60f, 0.50f);
+                                colors[ImGuiCol_Separator] = ImVec4(0.70f, 0.40f, 0.60f, 0.50f);
+                                colors[ImGuiCol_SeparatorHovered] = ImVec4(0.85f, 0.50f, 0.65f, 0.80f);
+                                colors[ImGuiCol_SeparatorActive] = ImVec4(0.90f, 0.55f, 0.70f, 1.00f);
+                                colors[ImGuiCol_CheckMark] = ImVec4(0.85f, 0.50f, 0.70f, 1.00f);
+                                colors[ImGuiCol_SliderGrab] = ImVec4(0.80f, 0.40f, 0.60f, 0.80f);
+                                colors[ImGuiCol_SliderGrabActive] = ImVec4(0.90f, 0.50f, 0.70f, 1.00f);
+                                colors[ImGuiCol_TextSelectedBg] = ImVec4(0.80f, 0.40f, 0.60f, 0.45f);
+                                colors[ImGuiCol_PopupBg] = ImVec4(0.10f, 0.07f, 0.12f, 0.95f);
+                                colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.06f, 0.04f, 0.08f, 0.60f);
+                                clear_color = ImVec4(0.12f, 0.08f, 0.15f, 1.00f);
+                            }
+                            ImGui::SameLine();
+                            if(ImGui::Button("Forest")){
+                                ImGui::StyleColorsDark();
+                                ImVec4* colors = ImGui::GetStyle().Colors;
+                                colors[ImGuiCol_WindowBg] = ImVec4(0.07f, 0.12f, 0.08f, 1.00f);
+                                colors[ImGuiCol_TitleBg] = ImVec4(0.18f, 0.42f, 0.22f, 0.70f);
+                                colors[ImGuiCol_TitleBgActive] = ImVec4(0.22f, 0.52f, 0.28f, 0.90f);
+                                colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.12f, 0.28f, 0.15f, 0.50f);
+                                colors[ImGuiCol_Button] = ImVec4(0.20f, 0.45f, 0.25f, 0.85f);
+                                colors[ImGuiCol_ButtonHovered] = ImVec4(0.25f, 0.55f, 0.30f, 1.00f);
+                                colors[ImGuiCol_ButtonActive] = ImVec4(0.15f, 0.35f, 0.20f, 1.00f);
+                                colors[ImGuiCol_Header] = ImVec4(0.20f, 0.50f, 0.25f, 0.70f);
+                                colors[ImGuiCol_HeaderHovered] = ImVec4(0.25f, 0.60f, 0.30f, 0.85f);
+                                colors[ImGuiCol_HeaderActive] = ImVec4(0.15f, 0.40f, 0.20f, 0.90f);
+                                colors[ImGuiCol_FrameBg] = ImVec4(0.10f, 0.18f, 0.12f, 0.80f);
+                                colors[ImGuiCol_FrameBgHovered] = ImVec4(0.14f, 0.24f, 0.16f, 0.90f);
+                                colors[ImGuiCol_FrameBgActive] = ImVec4(0.18f, 0.30f, 0.20f, 1.00f);
+                                colors[ImGuiCol_Tab] = ImVec4(0.18f, 0.42f, 0.22f, 0.60f);
+                                colors[ImGuiCol_TabHovered] = ImVec4(0.22f, 0.52f, 0.28f, 0.80f);
+                                colors[ImGuiCol_TabActive] = ImVec4(0.20f, 0.50f, 0.25f, 1.00f);
+                                colors[ImGuiCol_TabUnfocused] = ImVec4(0.12f, 0.28f, 0.15f, 0.50f);
+                                colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.18f, 0.42f, 0.22f, 0.80f);
+                                colors[ImGuiCol_TableHeaderBg] = ImVec4(0.18f, 0.45f, 0.22f, 0.80f);
+                                colors[ImGuiCol_TableBorderLight] = ImVec4(0.20f, 0.35f, 0.22f, 0.50f);
+                                colors[ImGuiCol_TableBorderStrong] = ImVec4(0.25f, 0.50f, 0.28f, 0.80f);
+                                colors[ImGuiCol_TableRowBg] = ImVec4(0.07f, 0.12f, 0.08f, 0.60f);
+                                colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.10f, 0.16f, 0.11f, 0.80f);
+                                colors[ImGuiCol_Text] = ImVec4(0.90f, 1.00f, 0.85f, 1.00f);
+                                colors[ImGuiCol_TextDisabled] = ImVec4(0.50f, 0.60f, 0.45f, 1.00f);
+                                colors[ImGuiCol_Border] = ImVec4(0.25f, 0.45f, 0.28f, 0.50f);
+                                colors[ImGuiCol_Separator] = ImVec4(0.25f, 0.45f, 0.28f, 0.50f);
+                                colors[ImGuiCol_SeparatorHovered] = ImVec4(0.30f, 0.55f, 0.35f, 0.80f);
+                                colors[ImGuiCol_SeparatorActive] = ImVec4(0.35f, 0.65f, 0.40f, 1.00f);
+                                colors[ImGuiCol_CheckMark] = ImVec4(0.30f, 0.60f, 0.35f, 1.00f);
+                                colors[ImGuiCol_SliderGrab] = ImVec4(0.22f, 0.50f, 0.28f, 0.80f);
+                                colors[ImGuiCol_SliderGrabActive] = ImVec4(0.28f, 0.60f, 0.35f, 1.00f);
+                                colors[ImGuiCol_TextSelectedBg] = ImVec4(0.22f, 0.50f, 0.28f, 0.45f);
+                                colors[ImGuiCol_PopupBg] = ImVec4(0.06f, 0.10f, 0.07f, 0.95f);
+                                colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.03f, 0.06f, 0.04f, 0.60f);
+                                clear_color = ImVec4(0.07f, 0.12f, 0.08f, 1.00f);
+                            }
+                            ImGui::SameLine();
+                            if(ImGui::Button("Midnight")){
+                                ImGui::StyleColorsDark();
+                                ImVec4* colors = ImGui::GetStyle().Colors;
+                                colors[ImGuiCol_WindowBg] = ImVec4(0.05f, 0.05f, 0.12f, 1.00f);
+                                colors[ImGuiCol_TitleBg] = ImVec4(0.12f, 0.18f, 0.45f, 0.70f);
+                                colors[ImGuiCol_TitleBgActive] = ImVec4(0.15f, 0.25f, 0.60f, 0.90f);
+                                colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.08f, 0.10f, 0.30f, 0.50f);
+                                colors[ImGuiCol_Button] = ImVec4(0.15f, 0.25f, 0.55f, 0.85f);
+                                colors[ImGuiCol_ButtonHovered] = ImVec4(0.20f, 0.35f, 0.70f, 1.00f);
+                                colors[ImGuiCol_ButtonActive] = ImVec4(0.10f, 0.20f, 0.45f, 1.00f);
+                                colors[ImGuiCol_Header] = ImVec4(0.15f, 0.30f, 0.65f, 0.70f);
+                                colors[ImGuiCol_HeaderHovered] = ImVec4(0.20f, 0.38f, 0.75f, 0.85f);
+                                colors[ImGuiCol_HeaderActive] = ImVec4(0.12f, 0.25f, 0.55f, 0.90f);
+                                colors[ImGuiCol_FrameBg] = ImVec4(0.08f, 0.10f, 0.20f, 0.80f);
+                                colors[ImGuiCol_FrameBgHovered] = ImVec4(0.10f, 0.14f, 0.28f, 0.90f);
+                                colors[ImGuiCol_FrameBgActive] = ImVec4(0.12f, 0.18f, 0.35f, 1.00f);
+                                colors[ImGuiCol_Tab] = ImVec4(0.12f, 0.20f, 0.48f, 0.60f);
+                                colors[ImGuiCol_TabHovered] = ImVec4(0.18f, 0.32f, 0.65f, 0.80f);
+                                colors[ImGuiCol_TabActive] = ImVec4(0.15f, 0.28f, 0.60f, 1.00f);
+                                colors[ImGuiCol_TabUnfocused] = ImVec4(0.08f, 0.12f, 0.30f, 0.50f);
+                                colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.12f, 0.20f, 0.48f, 0.80f);
+                                colors[ImGuiCol_TableHeaderBg] = ImVec4(0.12f, 0.22f, 0.52f, 0.80f);
+                                colors[ImGuiCol_TableBorderLight] = ImVec4(0.12f, 0.15f, 0.35f, 0.50f);
+                                colors[ImGuiCol_TableBorderStrong] = ImVec4(0.18f, 0.25f, 0.55f, 0.80f);
+                                colors[ImGuiCol_TableRowBg] = ImVec4(0.05f, 0.05f, 0.12f, 0.60f);
+                                colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.07f, 0.07f, 0.16f, 0.80f);
+                                colors[ImGuiCol_Text] = ImVec4(0.85f, 0.90f, 1.00f, 1.00f);
+                                colors[ImGuiCol_TextDisabled] = ImVec4(0.45f, 0.50f, 0.65f, 1.00f);
+                                colors[ImGuiCol_Border] = ImVec4(0.18f, 0.25f, 0.50f, 0.50f);
+                                colors[ImGuiCol_Separator] = ImVec4(0.18f, 0.25f, 0.50f, 0.50f);
+                                colors[ImGuiCol_SeparatorHovered] = ImVec4(0.22f, 0.35f, 0.65f, 0.80f);
+                                colors[ImGuiCol_SeparatorActive] = ImVec4(0.25f, 0.40f, 0.75f, 1.00f);
+                                colors[ImGuiCol_CheckMark] = ImVec4(0.25f, 0.40f, 0.75f, 1.00f);
+                                colors[ImGuiCol_SliderGrab] = ImVec4(0.18f, 0.28f, 0.60f, 0.80f);
+                                colors[ImGuiCol_SliderGrabActive] = ImVec4(0.22f, 0.35f, 0.70f, 1.00f);
+                                colors[ImGuiCol_TextSelectedBg] = ImVec4(0.15f, 0.25f, 0.55f, 0.45f);
+                                colors[ImGuiCol_PopupBg] = ImVec4(0.04f, 0.04f, 0.09f, 0.95f);
+                                colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.02f, 0.02f, 0.06f, 0.60f);
+                                clear_color = ImVec4(0.05f, 0.05f, 0.12f, 1.00f);
+                            }
+                            ImGui::SameLine();
+                            if(ImGui::Button("Lavender")){
+                                ImGui::StyleColorsDark();
+                                ImVec4* colors = ImGui::GetStyle().Colors;
+                                colors[ImGuiCol_WindowBg] = ImVec4(0.08f, 0.06f, 0.14f, 1.00f);
+                                colors[ImGuiCol_TitleBg] = ImVec4(0.55f, 0.45f, 0.75f, 0.70f);
+                                colors[ImGuiCol_TitleBgActive] = ImVec4(0.65f, 0.55f, 0.85f, 0.90f);
+                                colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.40f, 0.32f, 0.55f, 0.50f);
+                                colors[ImGuiCol_Button] = ImVec4(0.55f, 0.45f, 0.75f, 0.85f);
+                                colors[ImGuiCol_ButtonHovered] = ImVec4(0.65f, 0.55f, 0.85f, 1.00f);
+                                colors[ImGuiCol_ButtonActive] = ImVec4(0.45f, 0.35f, 0.65f, 1.00f);
+                                colors[ImGuiCol_Header] = ImVec4(0.55f, 0.45f, 0.75f, 0.70f);
+                                colors[ImGuiCol_HeaderHovered] = ImVec4(0.60f, 0.50f, 0.80f, 0.85f);
+                                colors[ImGuiCol_HeaderActive] = ImVec4(0.50f, 0.40f, 0.70f, 0.90f);
+                                colors[ImGuiCol_FrameBg] = ImVec4(0.12f, 0.10f, 0.20f, 0.80f);
+                                colors[ImGuiCol_FrameBgHovered] = ImVec4(0.16f, 0.14f, 0.26f, 0.90f);
+                                colors[ImGuiCol_FrameBgActive] = ImVec4(0.20f, 0.18f, 0.32f, 1.00f);
+                                colors[ImGuiCol_Tab] = ImVec4(0.50f, 0.40f, 0.70f, 0.60f);
+                                colors[ImGuiCol_TabHovered] = ImVec4(0.60f, 0.50f, 0.80f, 0.80f);
+                                colors[ImGuiCol_TabActive] = ImVec4(0.55f, 0.45f, 0.75f, 1.00f);
+                                colors[ImGuiCol_TabUnfocused] = ImVec4(0.35f, 0.28f, 0.50f, 0.50f);
+                                colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.50f, 0.40f, 0.70f, 0.80f);
+                                colors[ImGuiCol_TableHeaderBg] = ImVec4(0.50f, 0.40f, 0.70f, 0.80f);
+                                colors[ImGuiCol_TableBorderLight] = ImVec4(0.45f, 0.35f, 0.60f, 0.50f);
+                                colors[ImGuiCol_TableBorderStrong] = ImVec4(0.60f, 0.50f, 0.80f, 0.80f);
+                                colors[ImGuiCol_TableRowBg] = ImVec4(0.08f, 0.06f, 0.14f, 0.60f);
+                                colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.11f, 0.08f, 0.18f, 0.80f);
+                                colors[ImGuiCol_Text] = ImVec4(0.95f, 0.90f, 1.00f, 1.00f);
+                                colors[ImGuiCol_TextDisabled] = ImVec4(0.55f, 0.50f, 0.70f, 1.00f);
+                                colors[ImGuiCol_Border] = ImVec4(0.55f, 0.45f, 0.70f, 0.50f);
+                                colors[ImGuiCol_Separator] = ImVec4(0.55f, 0.45f, 0.70f, 0.50f);
+                                colors[ImGuiCol_SeparatorHovered] = ImVec4(0.65f, 0.55f, 0.80f, 0.80f);
+                                colors[ImGuiCol_SeparatorActive] = ImVec4(0.75f, 0.65f, 0.90f, 1.00f);
+                                colors[ImGuiCol_CheckMark] = ImVec4(0.70f, 0.60f, 0.90f, 1.00f);
+                                colors[ImGuiCol_SliderGrab] = ImVec4(0.55f, 0.45f, 0.75f, 0.80f);
+                                colors[ImGuiCol_SliderGrabActive] = ImVec4(0.65f, 0.55f, 0.85f, 1.00f);
+                                colors[ImGuiCol_TextSelectedBg] = ImVec4(0.55f, 0.45f, 0.75f, 0.45f);
+                                colors[ImGuiCol_PopupBg] = ImVec4(0.07f, 0.05f, 0.11f, 0.95f);
+                                colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.04f, 0.03f, 0.07f, 0.60f);
+                                clear_color = ImVec4(0.08f, 0.06f, 0.14f, 1.00f);
+                            }
+                            ImGui::SameLine();
+                            if(ImGui::Button("Ocean")){
+                                ImGui::StyleColorsDark();
+                                ImVec4* colors = ImGui::GetStyle().Colors;
+                                colors[ImGuiCol_WindowBg] = ImVec4(0.05f, 0.12f, 0.18f, 1.00f);
+                                colors[ImGuiCol_TitleBg] = ImVec4(0.08f, 0.45f, 0.55f, 0.70f);
+                                colors[ImGuiCol_TitleBgActive] = ImVec4(0.10f, 0.60f, 0.70f, 0.90f);
+                                colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.05f, 0.25f, 0.32f, 0.50f);
+                                colors[ImGuiCol_Button] = ImVec4(0.10f, 0.55f, 0.65f, 0.85f);
+                                colors[ImGuiCol_ButtonHovered] = ImVec4(0.15f, 0.70f, 0.80f, 1.00f);
+                                colors[ImGuiCol_ButtonActive] = ImVec4(0.08f, 0.45f, 0.55f, 1.00f);
+                                colors[ImGuiCol_Header] = ImVec4(0.10f, 0.60f, 0.70f, 0.70f);
+                                colors[ImGuiCol_HeaderHovered] = ImVec4(0.12f, 0.70f, 0.80f, 0.85f);
+                                colors[ImGuiCol_HeaderActive] = ImVec4(0.08f, 0.50f, 0.60f, 0.90f);
+                                colors[ImGuiCol_FrameBg] = ImVec4(0.07f, 0.15f, 0.22f, 0.80f);
+                                colors[ImGuiCol_FrameBgHovered] = ImVec4(0.10f, 0.20f, 0.28f, 0.90f);
+                                colors[ImGuiCol_FrameBgActive] = ImVec4(0.12f, 0.25f, 0.35f, 1.00f);
+                                colors[ImGuiCol_Tab] = ImVec4(0.08f, 0.48f, 0.58f, 0.60f);
+                                colors[ImGuiCol_TabHovered] = ImVec4(0.12f, 0.62f, 0.72f, 0.80f);
+                                colors[ImGuiCol_TabActive] = ImVec4(0.10f, 0.55f, 0.65f, 1.00f);
+                                colors[ImGuiCol_TabUnfocused] = ImVec4(0.05f, 0.30f, 0.38f, 0.50f);
+                                colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.08f, 0.48f, 0.58f, 0.80f);
+                                colors[ImGuiCol_TableHeaderBg] = ImVec4(0.08f, 0.50f, 0.60f, 0.80f);
+                                colors[ImGuiCol_TableBorderLight] = ImVec4(0.07f, 0.35f, 0.45f, 0.50f);
+                                colors[ImGuiCol_TableBorderStrong] = ImVec4(0.10f, 0.55f, 0.65f, 0.80f);
+                                colors[ImGuiCol_TableRowBg] = ImVec4(0.05f, 0.12f, 0.18f, 0.60f);
+                                colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.07f, 0.16f, 0.22f, 0.80f);
+                                colors[ImGuiCol_Text] = ImVec4(0.70f, 0.90f, 1.00f, 1.00f);
+                                colors[ImGuiCol_TextDisabled] = ImVec4(0.40f, 0.55f, 0.65f, 1.00f);
+                                colors[ImGuiCol_Border] = ImVec4(0.10f, 0.45f, 0.55f, 0.50f);
+                                colors[ImGuiCol_Separator] = ImVec4(0.10f, 0.45f, 0.55f, 0.50f);
+                                colors[ImGuiCol_SeparatorHovered] = ImVec4(0.12f, 0.60f, 0.70f, 0.80f);
+                                colors[ImGuiCol_SeparatorActive] = ImVec4(0.15f, 0.70f, 0.80f, 1.00f);
+                                colors[ImGuiCol_CheckMark] = ImVec4(0.15f, 0.65f, 0.75f, 1.00f);
+                                colors[ImGuiCol_SliderGrab] = ImVec4(0.12f, 0.60f, 0.70f, 0.80f);
+                                colors[ImGuiCol_SliderGrabActive] = ImVec4(0.15f, 0.70f, 0.80f, 1.00f);
+                                colors[ImGuiCol_TextSelectedBg] = ImVec4(0.10f, 0.50f, 0.60f, 0.45f);
+                                colors[ImGuiCol_PopupBg] = ImVec4(0.04f, 0.08f, 0.12f, 0.95f);
+                                colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.02f, 0.06f, 0.09f, 0.60f);
+                                clear_color = ImVec4(0.05f, 0.12f, 0.18f, 1.00f);
+                            }
+                            ImGui::SameLine();
+                            if(ImGui::Button("Coffee")){
+                                ImGui::StyleColorsDark();
+                                ImVec4* colors = ImGui::GetStyle().Colors;
+                                colors[ImGuiCol_WindowBg] = ImVec4(0.12f, 0.08f, 0.06f, 1.00f);
+                                colors[ImGuiCol_TitleBg] = ImVec4(0.48f, 0.30f, 0.18f, 0.70f);
+                                colors[ImGuiCol_TitleBgActive] = ImVec4(0.58f, 0.38f, 0.22f, 0.90f);
+                                colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.32f, 0.20f, 0.12f, 0.50f);
+                                colors[ImGuiCol_Button] = ImVec4(0.55f, 0.35f, 0.20f, 0.85f);
+                                colors[ImGuiCol_ButtonHovered] = ImVec4(0.70f, 0.45f, 0.25f, 1.00f);
+                                colors[ImGuiCol_ButtonActive] = ImVec4(0.45f, 0.28f, 0.15f, 1.00f);
+                                colors[ImGuiCol_Header] = ImVec4(0.60f, 0.38f, 0.22f, 0.70f);
+                                colors[ImGuiCol_HeaderHovered] = ImVec4(0.70f, 0.45f, 0.28f, 0.85f);
+                                colors[ImGuiCol_HeaderActive] = ImVec4(0.52f, 0.32f, 0.18f, 0.90f);
+                                colors[ImGuiCol_FrameBg] = ImVec4(0.18f, 0.12f, 0.08f, 0.80f);
+                                colors[ImGuiCol_FrameBgHovered] = ImVec4(0.25f, 0.16f, 0.10f, 0.90f);
+                                colors[ImGuiCol_FrameBgActive] = ImVec4(0.30f, 0.18f, 0.12f, 1.00f);
+                                colors[ImGuiCol_Tab] = ImVec4(0.48f, 0.30f, 0.18f, 0.60f);
+                                colors[ImGuiCol_TabHovered] = ImVec4(0.62f, 0.40f, 0.22f, 0.80f);
+                                colors[ImGuiCol_TabActive] = ImVec4(0.55f, 0.35f, 0.20f, 1.00f);
+                                colors[ImGuiCol_TabUnfocused] = ImVec4(0.32f, 0.20f, 0.12f, 0.50f);
+                                colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.48f, 0.30f, 0.18f, 0.80f);
+                                colors[ImGuiCol_TableHeaderBg] = ImVec4(0.50f, 0.32f, 0.20f, 0.80f);
+                                colors[ImGuiCol_TableBorderLight] = ImVec4(0.35f, 0.22f, 0.14f, 0.50f);
+                                colors[ImGuiCol_TableBorderStrong] = ImVec4(0.55f, 0.35f, 0.22f, 0.80f);
+                                colors[ImGuiCol_TableRowBg] = ImVec4(0.12f, 0.08f, 0.06f, 0.60f);
+                                colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.15f, 0.10f, 0.08f, 0.80f);
+                                colors[ImGuiCol_Text] = ImVec4(0.95f, 0.85f, 0.70f, 1.00f);
+                                colors[ImGuiCol_TextDisabled] = ImVec4(0.60f, 0.50f, 0.40f, 1.00f);
+                                colors[ImGuiCol_Border] = ImVec4(0.45f, 0.28f, 0.16f, 0.60f);
+                                colors[ImGuiCol_Separator] = ImVec4(0.45f, 0.28f, 0.16f, 0.50f);
+                                colors[ImGuiCol_SeparatorHovered] = ImVec4(0.60f, 0.38f, 0.22f, 0.80f);
+                                colors[ImGuiCol_SeparatorActive] = ImVec4(0.70f, 0.45f, 0.25f, 1.00f);
+                                colors[ImGuiCol_CheckMark] = ImVec4(0.70f, 0.45f, 0.25f, 1.00f);
+                                colors[ImGuiCol_SliderGrab] = ImVec4(0.55f, 0.35f, 0.20f, 0.80f);
+                                colors[ImGuiCol_SliderGrabActive] = ImVec4(0.70f, 0.45f, 0.25f, 1.00f);
+                                colors[ImGuiCol_TextSelectedBg] = ImVec4(0.55f, 0.35f, 0.20f, 0.45f);
+                                colors[ImGuiCol_PopupBg] = ImVec4(0.10f, 0.07f, 0.05f, 0.95f);
+                                colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.06f, 0.04f, 0.03f, 0.60f);
+                                clear_color = ImVec4(0.12f, 0.08f, 0.06f, 1.00f);
+                            }
+                            ImGui::SameLine();
+                            if(ImGui::Button("Cyberpunk")){
+                                ImGui::StyleColorsDark();
+                                ImVec4* colors = ImGui::GetStyle().Colors;
+                                colors[ImGuiCol_WindowBg] = ImVec4(0.06f, 0.04f, 0.10f, 1.00f);
+                                colors[ImGuiCol_TitleBg] = ImVec4(0.00f, 0.70f, 0.70f, 0.70f);
+                                colors[ImGuiCol_TitleBgActive] = ImVec4(0.00f, 0.85f, 0.85f, 0.90f);
+                                colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.00f, 0.45f, 0.45f, 0.50f);
+                                colors[ImGuiCol_Button] = ImVec4(0.00f, 0.80f, 0.80f, 0.85f);
+                                colors[ImGuiCol_ButtonHovered] = ImVec4(0.20f, 0.90f, 0.90f, 1.00f);
+                                colors[ImGuiCol_ButtonActive] = ImVec4(0.00f, 0.60f, 0.60f, 1.00f);
+                                colors[ImGuiCol_Header] = ImVec4(0.80f, 0.00f, 0.80f, 0.70f);
+                                colors[ImGuiCol_HeaderHovered] = ImVec4(0.90f, 0.20f, 0.90f, 0.85f);
+                                colors[ImGuiCol_HeaderActive] = ImVec4(0.70f, 0.00f, 0.70f, 0.90f);
+                                colors[ImGuiCol_FrameBg] = ImVec4(0.10f, 0.06f, 0.15f, 0.80f);
+                                colors[ImGuiCol_FrameBgHovered] = ImVec4(0.15f, 0.10f, 0.22f, 0.90f);
+                                colors[ImGuiCol_FrameBgActive] = ImVec4(0.20f, 0.12f, 0.28f, 1.00f);
+                                colors[ImGuiCol_Tab] = ImVec4(0.70f, 0.00f, 0.70f, 0.60f);
+                                colors[ImGuiCol_TabHovered] = ImVec4(0.85f, 0.10f, 0.85f, 0.80f);
+                                colors[ImGuiCol_TabActive] = ImVec4(0.00f, 0.75f, 0.75f, 1.00f);
+                                colors[ImGuiCol_TabUnfocused] = ImVec4(0.50f, 0.00f, 0.50f, 0.50f);
+                                colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.60f, 0.00f, 0.60f, 0.80f);
+                                colors[ImGuiCol_TableHeaderBg] = ImVec4(0.75f, 0.00f, 0.75f, 0.80f);
+                                colors[ImGuiCol_TableBorderLight] = ImVec4(0.00f, 0.50f, 0.50f, 0.50f);
+                                colors[ImGuiCol_TableBorderStrong] = ImVec4(0.00f, 0.70f, 0.70f, 0.80f);
+                                colors[ImGuiCol_TableRowBg] = ImVec4(0.06f, 0.04f, 0.10f, 0.60f);
+                                colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.08f, 0.05f, 0.13f, 0.80f);
+                                colors[ImGuiCol_Text] = ImVec4(0.00f, 1.00f, 1.00f, 1.00f);
+                                colors[ImGuiCol_TextDisabled] = ImVec4(0.40f, 0.60f, 0.60f, 1.00f);
+                                colors[ImGuiCol_Border] = ImVec4(0.00f, 0.80f, 0.80f, 0.50f);
+                                colors[ImGuiCol_Separator] = ImVec4(0.00f, 0.80f, 0.80f, 0.50f);
+                                colors[ImGuiCol_SeparatorHovered] = ImVec4(0.20f, 0.90f, 0.90f, 0.80f);
+                                colors[ImGuiCol_SeparatorActive] = ImVec4(0.00f, 1.00f, 1.00f, 1.00f);
+                                colors[ImGuiCol_CheckMark] = ImVec4(0.00f, 1.00f, 1.00f, 1.00f);
+                                colors[ImGuiCol_SliderGrab] = ImVec4(0.00f, 0.80f, 0.80f, 0.80f);
+                                colors[ImGuiCol_SliderGrabActive] = ImVec4(0.20f, 0.90f, 0.90f, 1.00f);
+                                colors[ImGuiCol_TextSelectedBg] = ImVec4(0.80f, 0.00f, 0.80f, 0.45f);
+                                colors[ImGuiCol_PopupBg] = ImVec4(0.05f, 0.03f, 0.08f, 0.95f);
+                                colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.03f, 0.02f, 0.05f, 0.60f);
+                                clear_color = ImVec4(0.06f, 0.04f, 0.10f, 1.00f);
+                            }
+                            ImGui::Separator();
+
+                            ImGui::Text("Background:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##backgroundColorPicker", (float*)&clear_color, ImGuiColorEditFlags_NoInputs);
+                            
+                            // Window цвета
+                            ImGui::Text("Window BG:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##WindowBg", (float*)&ImGui::GetStyle().Colors[ImGuiCol_WindowBg], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Title BG:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TitleBg", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TitleBg], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Title Active:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TitleBgActive", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TitleBgActive], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Button цвета
+                            ImGui::Text("Button:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##Button", (float*)&ImGui::GetStyle().Colors[ImGuiCol_Button], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Button Hovered:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##ButtonHovered", (float*)&ImGui::GetStyle().Colors[ImGuiCol_ButtonHovered], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Button Active:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##ButtonActive", (float*)&ImGui::GetStyle().Colors[ImGuiCol_ButtonActive], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Header цвета (CollapsingHeader)
+                            ImGui::Text("Header:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##Header", (float*)&ImGui::GetStyle().Colors[ImGuiCol_Header], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Header Hovered:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##HeaderHovered", (float*)&ImGui::GetStyle().Colors[ImGuiCol_HeaderHovered], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Header Active:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##HeaderActive", (float*)&ImGui::GetStyle().Colors[ImGuiCol_HeaderActive], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Frame цвета (InputText, Slider и т.д.)
+                            ImGui::Text("Frame BG:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##FrameBg", (float*)&ImGui::GetStyle().Colors[ImGuiCol_FrameBg], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Frame Hovered:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##FrameBgHovered", (float*)&ImGui::GetStyle().Colors[ImGuiCol_FrameBgHovered], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Frame Active:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##FrameBgActive", (float*)&ImGui::GetStyle().Colors[ImGuiCol_FrameBgActive], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Tab цвета
+                            ImGui::Text("Tab:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##Tab", (float*)&ImGui::GetStyle().Colors[ImGuiCol_Tab], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Tab Hovered:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TabHovered", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TabHovered], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Tab Active:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TabActive", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TabActive], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Table цвета
+                            ImGui::Text("Table Header:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TableHeaderBg", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TableHeaderBg], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Table Row:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TableRowBg", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TableRowBg], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Table Row Alt:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TableRowBgAlt", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TableRowBgAlt], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Text цвета
+                            ImGui::Text("Text:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##Text", (float*)&ImGui::GetStyle().Colors[ImGuiCol_Text], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Text Disabled:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##TextDisabled", (float*)&ImGui::GetStyle().Colors[ImGuiCol_TextDisabled], ImGuiColorEditFlags_NoInputs);
+                            
+                            // CheckMark
+                            ImGui::Text("CheckMark:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##CheckMark", (float*)&ImGui::GetStyle().Colors[ImGuiCol_CheckMark], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Slider
+                            ImGui::Text("Slider Grab:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##SliderGrab", (float*)&ImGui::GetStyle().Colors[ImGuiCol_SliderGrab], ImGuiColorEditFlags_NoInputs);
+                            
+                            ImGui::Text("Slider Active:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##SliderGrabActive", (float*)&ImGui::GetStyle().Colors[ImGuiCol_SliderGrabActive], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Separator
+                            ImGui::Text("Separator:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##Separator", (float*)&ImGui::GetStyle().Colors[ImGuiCol_Separator], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Border
+                            ImGui::Text("Border:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##Border", (float*)&ImGui::GetStyle().Colors[ImGuiCol_Border], ImGuiColorEditFlags_NoInputs);
+                            
+                            // Popup
+                            ImGui::Text("Popup BG:");
+                            ImGui::SameLine();
+                            ImGui::ColorEdit3("##PopupBg", (float*)&ImGui::GetStyle().Colors[ImGuiCol_PopupBg], ImGuiColorEditFlags_NoInputs);
                         }
                     
                     ImGui::EndTabItem();

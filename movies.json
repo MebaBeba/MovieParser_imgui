@@ -14,7 +14,7 @@
         "imdbID": "tt0116669",
         "imdbRating": "5.8",
         "personalRating": "",
-        "watched": false
+        "watched": true
     },
     {
         "Actors": "Bryan Cranston, Aaron Paul, Anna Gunn",
@@ -64,8 +64,8 @@
         "Year": "2011",
         "imdbID": "tt1718199",
         "imdbRating": "7.0",
-        "personalRating": "",
-        "watched": false
+        "personalRating": "6.800000",
+        "watched": true
     },
     {
         "Actors": "Kirk Douglas, Michael A. Goorjian, Karen Tucker",
@@ -99,7 +99,7 @@
         "imdbID": "tt0804497",
         "imdbRating": "7.1",
         "personalRating": "",
-        "watched": false
+        "watched": true
     },
     {
         "Actors": "Daniel Craig, Rooney Mara, Christopher Plummer",
@@ -115,6 +115,40 @@
         "Year": "2011",
         "imdbID": "tt1568346",
         "imdbRating": "7.8",
+        "personalRating": "",
+        "watched": false
+    },
+    {
+        "Actors": "Boris Kievsky, Murat Han, Kelli Daniels",
+        "Awards": "N/A",
+        "Country": "United States",
+        "Director": "Nicholas Mah",
+        "Genre": "Crime, Drama, Thriller",
+        "Language": "English",
+        "Released": "N/A",
+        "Runtime": "72 min",
+        "Title": "Sobaka",
+        "Writer": "William Johnson",
+        "Year": "2008",
+        "imdbID": "tt1337542",
+        "imdbRating": "5.1",
+        "personalRating": "8.600000",
+        "watched": true
+    },
+    {
+        "Actors": "Sepideh Dastineh",
+        "Awards": "N/A",
+        "Country": "Iran",
+        "Director": "Alireza Dastmalchi",
+        "Genre": "Short",
+        "Language": "Persian",
+        "Released": "N/A",
+        "Runtime": "N/A",
+        "Title": "Kot",
+        "Writer": "Alireza Dastmalchi",
+        "Year": "2014",
+        "imdbID": "tt31041305",
+        "imdbRating": "N/A",
         "personalRating": "",
         "watched": false
     }
